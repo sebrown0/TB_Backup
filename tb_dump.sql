@@ -415,7 +415,7 @@ CREATE TABLE `entity` (
   CONSTRAINT `fk_entity_entity_help1` FOREIGN KEY (`entity_help_id`, `id`) REFERENCES `entity_help` (`id`, `entity_id`),
   CONSTRAINT `fk_entity_entity_type1` FOREIGN KEY (`entity_type_id`, `entity_type_entity_type_name`) REFERENCES `entity_type` (`id`, `entity_type_name`),
   CONSTRAINT `fk_entity_entity_type_details1` FOREIGN KEY (`entity_details_id`, `id`) REFERENCES `entity_details` (`id`, `entity_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -424,6 +424,7 @@ CREATE TABLE `entity` (
 
 LOCK TABLES `entity` WRITE;
 /*!40000 ALTER TABLE `entity` DISABLE KEYS */;
+INSERT INTO `entity` VALUES (1,1,'Root',1,1,'Root',0,0,1),(2,2,'Dakar Web',2,2,'Application',1,1,2),(3,3,'Login Screen',3,6,'Form',2,2,0),(4,4,'User Name',4,21,'Label',3,3,4),(5,5,'User Name',5,18,'Text In',3,3,5),(6,6,'User Password',6,21,'Label',3,3,0),(7,7,'User Password',7,18,'Text In',3,3,0),(8,8,'Login Button',8,23,'Button - Redirect',3,3,8),(9,9,'Home Page',9,8,'Parent Form',2,2,0),(10,10,'Home Page Info Bar',10,11,'Info Bar',9,9,10),(11,11,'Dakar Logo',11,13,'Image',10,10,11),(12,12,'Current Module Indicator',12,21,'Label',10,10,12),(13,13,'Menu Toggle',13,25,'Button - Function',10,10,0),(14,14,'Current Company',14,20,'Combo',10,10,14),(15,15,'Home Page Top Right Nav Bar',15,10,'Nav Bar',9,9,0),(16,16,'Authorisations',16,24,'Button - Display',15,15,16),(17,17,'Employee Creation Wizard',17,24,'Button - Display',15,15,17),(18,18,'Employee CV',18,24,'Button - Display',15,15,18),(19,19,'Employee Grid View',19,24,'Button - Display',15,15,19),(20,20,'Visual Reports',20,24,'Button - Display',15,15,20),(21,21,'Dakar Intelligence',21,24,'Button - Display',15,15,21),(22,22,'Organisation Chart',22,24,'Button - Display',15,15,22),(23,23,'My Company / Last Viewed',23,24,'Button - Display',15,15,23),(24,24,'All Notifications',24,24,'Button - Display',15,15,24),(25,25,'New Employments',25,24,'Button - Display',15,15,25),(26,26,'Terminations',26,24,'Button - Display',15,15,26),(27,27,'Quick Links',27,24,'Button - Display',15,15,27),(28,28,'User Avatar',28,24,'Button - Display',15,15,28),(29,29,'Main Menu',29,10,'Nav Bar',9,9,29),(30,30,'Main Menu - Payroll',30,10,'Nav Bar',29,29,30),(31,31,'Employee List',31,24,'Button - Display',30,30,0),(32,32,'Documents',32,24,'Button - Display',30,30,0),(33,33,'Employee Others',33,24,'Button - Display',30,30,33),(34,34,'Payroll',34,24,'Button - Display',30,30,34),(35,35,'Payroll Statistics',35,24,'Button - Display',30,30,35),(36,36,'Absence Statistics',36,24,'Button - Display',30,30,36),(37,37,'Reports',37,24,'Button - Display',30,30,37),(38,38,'Monthly Reports',38,24,'Button - Display',30,30,38),(39,39,'Yearly Reports',39,24,'Button - Display',30,30,39),(40,40,'Bulk Updates',40,24,'Button - Display',30,30,40),(41,41,'Settings',41,24,'Button - Display',30,30,41);
 /*!40000 ALTER TABLE `entity` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -448,7 +449,7 @@ CREATE TABLE `entity_action` (
   UNIQUE KEY `entity_id_UNIQUE` (`entity_id`),
   KEY `fk_entity_action_entity_action_type1_idx` (`entity_action_type_id`),
   CONSTRAINT `fk_entity_action_entity_action_type1` FOREIGN KEY (`entity_action_type_id`) REFERENCES `entity_action_type` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=34 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -457,6 +458,7 @@ CREATE TABLE `entity_action` (
 
 LOCK TABLES `entity_action` WRITE;
 /*!40000 ALTER TABLE `entity_action` DISABLE KEYS */;
+INSERT INTO `entity_action` VALUES (1,4,'Label: User Name label text','-','-','-','User Name',3),(2,5,'Enter the user name','Enter data','steveb','-','-',2),(3,6,'Label: User Password label text','-','-','-','Password',3),(4,7,'User password entry','Enter data','1234','-','-',2),(5,8,'Redirect the user to the Dakar Web homepage','Redirect to different page','-','-','-',1),(6,11,'Image: Dakar Logo','-','-','-','logo.png',3),(7,12,'Label: Current Module Indicator label text','-','-','-','Payroll',3),(8,13,'Button Function: Menu Toggle - Should toggle the view of the main menu show/hide.','Perform function','-','-','-',1),(9,14,'Combo: Current Company - Displays current company and list of all available companies. User can select the current company from here.','Peform function based on value','-','-','Mars~Mars Incorporated Ltd',5),(10,16,'Button Display: Authorisations - Display form','Display child','-','-','-',3),(11,17,'Button Display: Employee Creation Wizard ','Display child','-','-','-',1),(12,18,'Button Display: Employee CV','Display child','-','-','-',1),(13,19,'Button Display: Employee Grid View','Display child','-','-','-',1),(14,20,'Button Display: Visual Reports','Display child','-','-','-',1),(15,21,'Button Display: Dakar Intelligence','Display child','-','-','-',1),(16,22,'Button Display: Organisation Chart','Display child','-','-','-',1),(17,23,'Button Display: My Company / Last Viewed','Display child','-','-','-',1),(18,24,'Button Display: All Notifications','Display child','-','-','-',1),(19,25,'Button Display: New Employments','Display child','-','-','-',1),(20,26,'Button Display: Terminations','Display child','-','-','-',1),(21,27,'Button Display: Quick Links','Display child','-','-','-',1),(22,28,'Button Display: User Avatar','Display child','-','-','-',1),(23,31,'Button Display: Employee List','Display child','-','-','-',1),(24,32,'Button Display: Documents','Display child','-','-','-',1),(25,33,'Button Display: Employee Others','Display child','-','-','-',1),(26,34,'Button Display: Payroll','Display child','-','-','-',1),(27,35,'Button Display: Payroll Statistics','Display child','-','-','-',1),(28,36,'Button Display: Absence Statistics','Display child','-','-','-',1),(29,37,'Button Display: Reports','Display child','-','-','-',1),(30,38,'Button Display: Monthly Reports','Display child','-','-','-',1),(31,39,'Button Display: Yearly Reports','Display child','-','-','-',1),(32,40,'Button Display: Bulk Updates','Display child','-','-','-',1),(33,41,'Button Display: Settings','Display child','-','-','-',1);
 /*!40000 ALTER TABLE `entity_action` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -513,6 +515,7 @@ CREATE TABLE `entity_can_have_action` (
 
 LOCK TABLES `entity_can_have_action` WRITE;
 /*!40000 ALTER TABLE `entity_can_have_action` DISABLE KEYS */;
+INSERT INTO `entity_can_have_action` VALUES (1,4,4),(2,5,5),(3,6,6),(4,7,7),(5,8,8),(6,11,11),(7,12,12),(8,13,13),(9,14,14),(10,16,16),(11,17,17),(12,18,18),(13,19,19),(14,20,20),(15,21,21),(16,22,22),(17,23,23),(18,24,24),(19,25,25),(20,26,26),(21,27,27),(22,28,28),(23,31,31),(24,32,32),(25,33,33),(26,34,34),(27,35,35),(28,36,36),(29,37,37),(30,38,38),(31,39,39),(32,40,40),(33,41,41);
 /*!40000 ALTER TABLE `entity_can_have_action` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -534,7 +537,7 @@ CREATE TABLE `entity_details` (
   PRIMARY KEY (`id`,`entity_id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `entity_id_UNIQUE` (`entity_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -543,6 +546,7 @@ CREATE TABLE `entity_details` (
 
 LOCK TABLES `entity_details` WRITE;
 /*!40000 ALTER TABLE `entity_details` DISABLE KEYS */;
+INSERT INTO `entity_details` VALUES (1,1,'The root entity has no purpose except be the parent of all other entities.','2021-05-16','MAN','1900-01-01','00:00:00'),(2,2,'The Dakar Web App','2021-05-16','MAN','1900-01-01','00:00:00'),(3,3,'The login screen that a user first encounters','2021-05-16','MAN','1900-01-01','00:00:00'),(4,4,'Label for user name login','2021-05-16','MAN','1900-01-01','00:00:00'),(5,5,'Text box entry for user name','2021-05-16','MAN','1900-01-01','00:00:00'),(6,6,'Label for user password','2021-05-16','MAN','1900-01-01','00:00:00'),(7,7,'Text box entry for user password','2021-05-16','MAN','1900-01-01','00:00:00'),(8,8,'Click to login with user name & password','2021-05-16','MAN','1900-01-01','00:00:00'),(9,9,'Homepage of Dakar Web App','2021-05-16','MAN','1900-01-01','00:00:00'),(10,10,'Top left info bar. Displays - 1: Logo 2: Current module 3:Full Screen Icon 4: TCL Icon 5: Current Company','2021-05-16','MAN','1900-01-01','00:00:00'),(11,11,'Dakar logo image','2021-05-16','MAN','1900-01-01','00:00:00'),(12,12,'Displays the currentlt selected module','2021-05-16','MAN','1900-01-01','00:00:00'),(13,13,'Toggles the view of the main menu','2021-05-16','MAN','1900-01-01','00:00:00'),(14,14,'Displays current company and list of all available companies','2021-05-16','MAN','1900-01-01','00:00:00'),(15,15,'Provides shortcuts to app elements. Also is the only way to swap between modules.','2021-05-16','MAN','1900-01-01','00:00:00'),(16,16,'Displays the authorisations form','2021-05-16','MAN','1900-01-01','00:00:00'),(17,17,'Displays the employee creation wizard form','2021-05-16','MAN','1900-01-01','00:00:00'),(18,18,'Displays the employee CV form','2021-05-16','MAN','1900-01-01','00:00:00'),(19,19,'Displays the employee grid view form','2021-05-16','MAN','1900-01-01','00:00:00'),(20,20,'Displays the summary graphs form','2021-05-16','MAN','1900-01-01','00:00:00'),(21,21,'Displays the DI form','2021-05-16','MAN','1900-01-01','00:00:00'),(22,22,'Displays the organisation chart form','2021-05-16','MAN','1900-01-01','00:00:00'),(23,23,'Displays the last  viewed popup form','2021-05-16','MAN','1900-01-01','00:00:00'),(24,24,'Displays the last  all notifications popup form. Displays total notifications (if there are any)','2021-05-16','MAN','1900-01-01','00:00:00'),(25,25,'Displays the new employments popup form.','2021-05-16','MAN','1900-01-01','00:00:00'),(26,26,'Displays the terminations popup form.','2021-05-16','MAN','1900-01-01','00:00:00'),(27,27,'Displays the quick links popup form.','2021-05-16','MAN','1900-01-01','00:00:00'),(28,28,'Displays the user config/action popup form. Displays the user image if setup.','2021-05-16','MAN','1900-01-01','00:00:00'),(29,29,'Main navigation bar for the currently selected module in the app.','2021-05-16','MAN','1900-01-01','00:00:00'),(30,30,'Main navigation bar for the payroll module.','2021-05-16','MAN','1900-01-01','00:00:00'),(31,31,'Display the Employee List form.','2021-05-16','MAN','1900-01-01','00:00:00'),(32,32,'Display the Employee Document form.','2021-05-16','MAN','1900-01-01','00:00:00'),(33,33,'Display the Employee Others sub menu.','2021-05-16','MAN','1900-01-01','00:00:00'),(34,34,'Display the Payroll sub menu.','2021-05-16','MAN','1900-01-01','00:00:00'),(35,35,'Display the Employee Statistics sub menu.','2021-05-16','MAN','1900-01-01','00:00:00'),(36,36,'Display the Absence Statistics sub menu.','2021-05-16','MAN','1900-01-01','00:00:00'),(37,37,'Display the Reports sub menu.','2021-05-16','MAN','1900-01-01','00:00:00'),(38,38,'Display the Monthly Payroll Reports form.','2021-05-16','MAN','1900-01-01','00:00:00'),(39,39,'Display the Yearly Payroll Reports form.','2021-05-16','MAN','1900-01-01','00:00:00'),(40,40,'Display the Bulk Updates sub menu.','2021-05-16','MAN','1900-01-01','00:00:00'),(41,41,'Display the Settings form.','2021-05-16','MAN','1900-01-01','00:00:00');
 /*!40000 ALTER TABLE `entity_details` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -588,6 +592,7 @@ CREATE TABLE `entity_has_version` (
 
 LOCK TABLES `entity_has_version` WRITE;
 /*!40000 ALTER TABLE `entity_has_version` DISABLE KEYS */;
+INSERT INTO `entity_has_version` VALUES (1,1,1),(2,2,2),(3,3,3),(4,4,4),(5,5,5),(6,6,6),(7,7,7),(8,8,8),(9,9,9),(10,10,10),(11,11,11),(12,12,12),(13,13,13),(14,14,14),(15,15,15),(16,16,16),(17,17,17),(18,18,18),(19,19,19),(20,20,20),(21,21,21),(22,22,22),(23,23,23),(24,24,24),(25,25,25),(26,26,26),(27,27,27),(28,28,28),(29,29,29),(30,30,30),(31,31,31),(32,32,32),(33,33,33),(34,34,34),(35,35,35),(36,36,36),(37,37,37),(38,38,38),(39,39,39),(40,40,40),(41,41,41);
 /*!40000 ALTER TABLE `entity_has_version` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -608,7 +613,7 @@ CREATE TABLE `entity_help` (
   PRIMARY KEY (`id`,`entity_id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `entity_id_UNIQUE` (`entity_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -617,6 +622,7 @@ CREATE TABLE `entity_help` (
 
 LOCK TABLES `entity_help` WRITE;
 /*!40000 ALTER TABLE `entity_help` DISABLE KEYS */;
+INSERT INTO `entity_help` VALUES (1,1,'False','-','',''),(2,2,'False','-','',''),(3,3,'False','-','',''),(4,4,'False','-','',''),(5,5,'False','-','',''),(6,6,'False','-','',''),(7,7,'False','-','',''),(8,8,'True','Click to login','',''),(9,9,'False','-','',''),(10,10,'False','-','',''),(11,11,'False','-','',''),(12,12,'False','-','',''),(13,13,'True','Hide or Show Main Menu','',''),(14,14,'False','-','',''),(15,15,'False','-','',''),(16,16,'False','-','',''),(17,17,'False','-','',''),(18,18,'False','-','',''),(19,19,'False','-','',''),(20,20,'False','-','',''),(21,21,'False','-','',''),(22,22,'False','-','',''),(23,23,'False','-','',''),(24,24,'False','-','',''),(25,25,'False','-','',''),(26,26,'False','-','',''),(27,27,'False','-','',''),(28,28,'False','-','',''),(29,29,'False','-','',''),(30,30,'False','-','',''),(31,31,'False','-','',''),(32,32,'False','-','',''),(33,33,'False','-','',''),(34,34,'False','-','',''),(35,35,'False','-','',''),(36,36,'False','-','',''),(37,37,'False','-','',''),(38,38,'False','-','',''),(39,39,'False','-','',''),(40,40,'False','-','',''),(41,41,'False','-','','');
 /*!40000 ALTER TABLE `entity_help` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -822,7 +828,7 @@ CREATE TABLE `entity_todo` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `fk_entity_todo_entity1_idx` (`entity_id`,`entity_entity_id`),
   CONSTRAINT `fk_entity_todo_entity1` FOREIGN KEY (`entity_id`, `entity_entity_id`) REFERENCES `entity` (`id`, `entity_id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -831,6 +837,7 @@ CREATE TABLE `entity_todo` (
 
 LOCK TABLES `entity_todo` WRITE;
 /*!40000 ALTER TABLE `entity_todo` DISABLE KEYS */;
+INSERT INTO `entity_todo` VALUES (1,3,3,'2021-05-16','Google & Active dir.',0,'1900-01-01');
 /*!40000 ALTER TABLE `entity_todo` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -922,14 +929,7 @@ UNLOCK TABLES;
 /*!50003 SET sql_mode              = 'ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION' */ ;
 DELIMITER ;;
 /*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER `import_test_result_AFTER_INSERT` AFTER INSERT ON `import_test_result` FOR EACH ROW BEGIN
-	/*SET @IMPORT_TEST_RUN_ID_RESULT = NEW.test_run_id;
-    SET @IMPORT_TEST_RUN_BY_EMP_ID = NEW.run_by;
-	CALL add_test_case_result(
-		NEW.pass_fail_or_not_run,
-		NEW.test_complete_notes,
-		NEW.entity_test_version_id,
-		NEW.entity_test_id,
-		NEW.entity_id);*/
+	
 END */;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -1158,7 +1158,7 @@ CREATE TABLE `version` (
   `build` smallint(6) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1167,6 +1167,7 @@ CREATE TABLE `version` (
 
 LOCK TABLES `version` WRITE;
 /*!40000 ALTER TABLE `version` DISABLE KEYS */;
+INSERT INTO `version` VALUES (1,'Root','','ENTITY',1,0,0),(2,'Dakar Web','','ENTITY',1,0,0),(3,'Login Screen','','ENTITY',1,0,0),(4,'User Name','','ENTITY',1,0,0),(5,'User Name','','ENTITY',1,0,0),(6,'User Password','','ENTITY',1,0,0),(7,'User Password','','ENTITY',1,0,0),(8,'Login Button','','ENTITY',1,0,0),(9,'Home Page','','ENTITY',1,0,0),(10,'Home Page Info Bar','','ENTITY',1,0,0),(11,'Dakar Logo','','ENTITY',1,0,0),(12,'Current Module Indicator','','ENTITY',1,0,0),(13,'Menu Toggle','','ENTITY',1,0,0),(14,'Current Company','','ENTITY',1,0,0),(15,'Home Page Top Right Nav Bar','','ENTITY',1,0,0),(16,'Authorisations','','ENTITY',1,0,0),(17,'Employee Creation Wizard','','ENTITY',1,0,0),(18,'Employee CV','','ENTITY',1,0,0),(19,'Employee Grid View','','ENTITY',1,0,0),(20,'Visual Reports','','ENTITY',1,0,0),(21,'Dakar Intelligence','','ENTITY',1,0,0),(22,'Organisation Chart','','ENTITY',1,0,0),(23,'My Company / Last Viewed','','ENTITY',1,0,0),(24,'All Notifications','','ENTITY',1,0,0),(25,'New Employments','','ENTITY',1,0,0),(26,'Terminations','','ENTITY',1,0,0),(27,'Quick Links','','ENTITY',1,0,0),(28,'User Avatar','','ENTITY',1,0,0),(29,'Main Menu','','ENTITY',1,0,0),(30,'Main Menu - Payroll','','ENTITY',1,0,0),(31,'Employee List','','ENTITY',1,0,0),(32,'Documents','','ENTITY',1,0,0),(33,'Employee Others','','ENTITY',1,0,0),(34,'Payroll','','ENTITY',1,0,0),(35,'Payroll Statistics','','ENTITY',1,0,0),(36,'Absence Statistics','','ENTITY',1,0,0),(37,'Reports','','ENTITY',1,0,0),(38,'Monthly Reports','','ENTITY',1,0,0),(39,'Yearly Reports','','ENTITY',1,0,0),(40,'Bulk Updates','','ENTITY',1,0,0),(41,'Settings','','ENTITY',1,0,0);
 /*!40000 ALTER TABLE `version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1179,4 +1180,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-16  9:49:09
+-- Dump completed on 2021-05-16 12:35:30
