@@ -1,0 +1,35 @@
+row_id,test_suite_id,test_suite_name,test_suite_parent_row_id,test_suite_parent_id,test_suite_notes,category_type_name,endl
+1,1,Root,0,0,ADD TEST SUITE NOTES,Root,\N
+2,2,Dakar Web,1,1,ADD TEST SUITE NOTES,Application,\N
+3,3,Login Screen,2,2,ADD TEST SUITE NOTES,Form,\N
+8,8,Login Button,3,3,ADD TEST SUITE NOTES,Button - Redirect,\N
+9,9,Home Page,2,2,ADD TEST SUITE NOTES,Parent Form,\N
+10,10,Home Page Info Bar,9,9,ADD TEST SUITE NOTES,Info Bar,\N
+13,13,Menu Toggle,10,10,ADD TEST SUITE NOTES,Button - Function,\N
+15,15,Home Page Top Right Nav Bar,9,9,ADD TEST SUITE NOTES,Nav Bar,\N
+16,16,Authorisations,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+17,17,Employee Creation Wizard,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+18,18,Employee CV,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+19,19,Employee Grid View,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+20,20,Visual Reports,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+21,21,Dakar Intelligence,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+22,22,Organisation Chart,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+23,23,My Company / Last Viewed,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+24,24,All Notifications,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+25,25,New Employments,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+26,26,Terminations,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+27,27,Quick Links,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+28,28,User Avatar,15,15,ADD TEST SUITE NOTES,Button - Display,\N
+29,29,Main Menu,9,9,ADD TEST SUITE NOTES,Nav Bar,\N
+30,30,Main Menu - Payroll,29,29,ADD TEST SUITE NOTES,Nav Bar,\N
+31,31,Employee List,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+32,32,Documents,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+33,33,Employee Others,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+34,34,Payroll,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+35,35,Payroll Statistics,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+36,36,Absence Statistics,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+37,37,Reports,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+38,38,Monthly Reports,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+39,39,Yearly Reports,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+40,40,Bulk Updates,30,30,ADD TEST SUITE NOTES,Button - Display,\N
+41,41,Settings,30,30,ADD TEST SUITE NOTES,Button - Display,\N
