@@ -160,7 +160,7 @@ CREATE TABLE `data_entity_test_insert` (
   UNIQUE KEY `entity_test_row_id_UNIQUE` (`entity_test_row_id`),
   KEY `fk_entity_test_employee1_idx` (`created_by_employee_id`),
   CONSTRAINT `fk_entity_test_employee10` FOREIGN KEY (`created_by_employee_id`) REFERENCES `employee` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='	IN id INT UNSIGNED, IN entityTestId INT UNSIGNED, IN entityId INT UNSIGNED, IN entityEntityId INT UNSIGNED, \n	IN entityTestName VARCHAR(200), IN createdByEmployeeId VARCHAR(45), IN entityTestDesc VARCHAR(1000), \n    IN testFunction VARCHAR(1000), IN dataIn VARCHAR(1000), IN dataOut VARCHAR(1000), IN dataExpected VARCHAR(1000), \n    IN failureHaltsTest TINYINT, IN primaryTestCat VARCHAR(1000), IN secondaryTestCat VARCHAR(1000),\n    IN testCreated DATE, IN newVerCat ENUM(''MAJOR'', ''MINOR'', ''BUILD''), \n    IN parentId INT UNSIGNED, IN parentEntityTestId INT UNSIGNED,\n    IN lastRunDate DATE, IN lastRunTime TIME)\n';
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8 COMMENT='	IN id INT UNSIGNED, IN entityTestId INT UNSIGNED, IN entityId INT UNSIGNED, IN entityEntityId INT UNSIGNED, \n	IN entityTestName VARCHAR(200), IN createdByEmployeeId VARCHAR(45), IN entityTestDesc VARCHAR(1000), \n    IN testFunction VARCHAR(1000), IN dataIn VARCHAR(1000), IN dataOut VARCHAR(1000), IN dataExpected VARCHAR(1000), \n    IN failureHaltsTest TINYINT, IN primaryTestCat VARCHAR(1000), IN secondaryTestCat VARCHAR(1000),\n    IN testCreated DATE, IN newVerCat ENUM(''MAJOR'', ''MINOR'', ''BUILD''), \n    IN parentId INT UNSIGNED, IN parentEntityTestId INT UNSIGNED,\n    IN lastRunDate DATE, IN lastRunTime TIME)\n';
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -169,6 +169,7 @@ CREATE TABLE `data_entity_test_insert` (
 
 LOCK TABLES `data_entity_test_insert` WRITE;
 /*!40000 ALTER TABLE `data_entity_test_insert` DISABLE KEYS */;
+INSERT INTO `data_entity_test_insert` VALUES (1,1,1,'Top Level of: Root',1,1,'SB_1',0,0,'This is the top level test for Root. For this to pass all its children must pass.','','','','',0,'NA  ','NA','2021-05-16','N\r'),(2,2,2,'Top Level of: Dakar Web',2,2,'SB_1',1,1,'This is the top level test for Dakar Web. For this to pass all its children must pass.','','','','',0,'App','NA','2021-05-16','N\r'),(3,3,3,'Top Level of: Login Screen',3,3,'SB_1',2,2,'This is the top level test for Login Screen. For this to pass all its children must pass.','','','','',0,'Group Controls','Group Data','2021-05-16','N\r'),(4,4,4,'User Name',4,4,'SB_1',3,3,'Label for user name on the login screen','-','-','-','User Name',0,'Data Out','NA','2021-05-16','N\r'),(5,5,5,'User Name',5,5,'SB_1',3,3,'Enter user name','Enter data','steveb','-','-',0,'Data In','NA','2021-05-16','N\r'),(6,6,6,'User Password',6,6,'SB_1',3,3,'Label for user password on the login screen','-','-','-','Password',0,'Data Out','NA','2021-05-16','N\r'),(7,7,7,'User Password',7,7,'SB_1',3,3,'Enter password','Enter data','1234','-','-',0,'Data In','NA','2021-05-16','N\r'),(8,8,8,'Top Level of: Login Button',8,8,'SB_1',3,3,'This is the top level test for Login Button. For this to pass all its children must pass.','','','','',0,'Redirect','NA','2021-05-16','N\r'),(9,9,9,'Top Level of: Home Page',9,9,'SB_1',2,2,'This is the top level test for Home Page. For this to pass all its children must pass.','','','','',0,'Group Controls','Group Data','2021-05-16','N\r'),(10,10,10,'Top Level of: Home Page Info Bar',10,10,'SB_1',9,9,'This is the top level test for Home Page Info Bar. For this to pass all its children must pass.','','','','',0,'Data Out','Redirect','2021-05-16','N\r'),(11,12,12,'Current Module Indicator',12,12,'SB_1',10,10,'Shows the currently selected module','-','-','-','Payroll',0,'Data Out','NA','2021-05-16','N\r'),(12,14,14,'Current Company',14,14,'SB_1',10,10,'Shows the currently selected company','Peform function based on value','-','-','Mars~Mars Incorporated Ltd',0,'NA  ','NA','2021-05-16','N\r'),(13,13,13,'Top Level of: Menu Toggle',13,13,'SB_1',10,10,'This is the top level test for Menu Toggle. For this to pass all its children must pass.','','','','',0,'Perform Function','NA','2021-05-16','N\r'),(14,15,15,'Top Level of: Home Page Top Right Nav Bar',15,15,'SB_1',9,9,'This is the top level test for Home Page Top Right Nav Bar. For this to pass all its children must pass.','','','','',0,'Redirect','Data Out','2021-05-16','N\r'),(15,16,16,'Top Level of: Authorisations',16,16,'SB_1',15,15,'This is the top level test for Authorisations. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(16,17,17,'Top Level of: Employee Creation Wizard',17,17,'SB_1',15,15,'This is the top level test for Employee Creation Wizard. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(17,18,18,'Top Level of: Employee CV',18,18,'SB_1',15,15,'This is the top level test for Employee CV. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(18,19,19,'Top Level of: Employee Grid View',19,19,'SB_1',15,15,'This is the top level test for Employee Grid View. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(19,20,20,'Top Level of: Visual Reports',20,20,'SB_1',15,15,'This is the top level test for Visual Reports. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(20,21,21,'Top Level of: Dakar Intelligence',21,21,'SB_1',15,15,'This is the top level test for Dakar Intelligence. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(21,22,22,'Top Level of: Organisation Chart',22,22,'SB_1',15,15,'This is the top level test for Organisation Chart. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(22,23,23,'Top Level of: My Company / Last Viewed',23,23,'SB_1',15,15,'This is the top level test for My Company / Last Viewed. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(23,24,24,'Top Level of: All Notifications',24,24,'SB_1',15,15,'This is the top level test for All Notifications. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(24,25,25,'Top Level of: New Employments',25,25,'SB_1',15,15,'This is the top level test for New Employments. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(25,26,26,'Top Level of: Terminations',26,26,'SB_1',15,15,'This is the top level test for Terminations. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(26,27,27,'Top Level of: Quick Links',27,27,'SB_1',15,15,'This is the top level test for Quick Links. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(27,28,28,'Top Level of: User Avatar',28,28,'SB_1',15,15,'This is the top level test for User Avatar. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(28,29,29,'Top Level of: Main Menu',29,29,'SB_1',9,9,'This is the top level test for Main Menu. For this to pass all its children must pass.','','','','',0,'Redirect','Data Out','2021-05-16','N\r'),(29,30,30,'Top Level of: Main Menu - Payroll',30,30,'SB_1',29,29,'This is the top level test for Main Menu - Payroll. For this to pass all its children must pass.','','','','',0,'Redirect','Data Out','2021-05-16','N\r'),(30,31,31,'Top Level of: Employee List',31,31,'SB_1',30,30,'This is the top level test for Employee List. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(31,32,32,'Top Level of: Documents',32,32,'SB_1',30,30,'This is the top level test for Documents. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(32,33,33,'Top Level of: Employee Others',33,33,'SB_1',30,30,'This is the top level test for Employee Others. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(33,34,34,'Top Level of: Payroll',34,34,'SB_1',30,30,'This is the top level test for Payroll. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(34,35,35,'Top Level of: Payroll Statistics',35,35,'SB_1',30,30,'This is the top level test for Payroll Statistics. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(35,36,36,'Top Level of: Absence Statistics',36,36,'SB_1',30,30,'This is the top level test for Absence Statistics. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(36,37,37,'Top Level of: Reports',37,37,'SB_1',30,30,'This is the top level test for Reports. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(37,38,38,'Top Level of: Monthly Reports',38,38,'SB_1',30,30,'This is the top level test for Monthly Reports. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(38,39,39,'Top Level of: Yearly Reports',39,39,'SB_1',30,30,'This is the top level test for Yearly Reports. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(39,40,40,'Top Level of: Bulk Updates',40,40,'SB_1',30,30,'This is the top level test for Bulk Updates. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r'),(40,41,41,'Top Level of: Settings',41,41,'SB_1',30,30,'This is the top level test for Settings. For this to pass all its children must pass.','','','','',0,'Display Child','NA','2021-05-16','N\r');
 /*!40000 ALTER TABLE `data_entity_test_insert` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -234,6 +235,7 @@ CREATE TABLE `data_test_suite_insert` (
 
 LOCK TABLES `data_test_suite_insert` WRITE;
 /*!40000 ALTER TABLE `data_test_suite_insert` DISABLE KEYS */;
+INSERT INTO `data_test_suite_insert` VALUES (1,1,'Root',0,0,'ADD TEST SUITE NOTES','Root','N\r'),(2,2,'Dakar Web',1,1,'ADD TEST SUITE NOTES','Application','N\r'),(3,3,'Login Screen',2,2,'ADD TEST SUITE NOTES','Form','N\r'),(8,8,'Login Button',3,3,'ADD TEST SUITE NOTES','Button - Redirect','N\r'),(9,9,'Home Page',2,2,'ADD TEST SUITE NOTES','Parent Form','N\r'),(10,10,'Home Page Info Bar',9,9,'ADD TEST SUITE NOTES','Info Bar','N\r'),(13,13,'Menu Toggle',10,10,'ADD TEST SUITE NOTES','Button - Function','N\r'),(15,15,'Home Page Top Right Nav Bar',9,9,'ADD TEST SUITE NOTES','Nav Bar','N\r'),(16,16,'Authorisations',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(17,17,'Employee Creation Wizard',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(18,18,'Employee CV',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(19,19,'Employee Grid View',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(20,20,'Visual Reports',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(21,21,'Dakar Intelligence',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(22,22,'Organisation Chart',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(23,23,'My Company / Last Viewed',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(24,24,'All Notifications',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(25,25,'New Employments',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(26,26,'Terminations',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(27,27,'Quick Links',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(28,28,'User Avatar',15,15,'ADD TEST SUITE NOTES','Button - Display','N\r'),(29,29,'Main Menu',9,9,'ADD TEST SUITE NOTES','Nav Bar','N\r'),(30,30,'Main Menu - Payroll',29,29,'ADD TEST SUITE NOTES','Nav Bar','N\r'),(31,31,'Employee List',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(32,32,'Documents',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(33,33,'Employee Others',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(34,34,'Payroll',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(35,35,'Payroll Statistics',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(36,36,'Absence Statistics',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(37,37,'Reports',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(38,38,'Monthly Reports',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(39,39,'Yearly Reports',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(40,40,'Bulk Updates',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r'),(41,41,'Settings',30,30,'ADD TEST SUITE NOTES','Button - Display','N\r');
 /*!40000 ALTER TABLE `data_test_suite_insert` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!50003 SET @saved_cs_client      = @@character_set_client */ ;
@@ -681,7 +683,7 @@ CREATE TABLE `entity_test` (
   CONSTRAINT `fk_entity_test_employee1` FOREIGN KEY (`created_by_employee_id`) REFERENCES `employee` (`id`) ON UPDATE CASCADE,
   CONSTRAINT `fk_entity_test_entity1` FOREIGN KEY (`entity_id`, `entity_entity_id`) REFERENCES `entity` (`id`, `entity_id`) ON UPDATE CASCADE,
   CONSTRAINT `fk_entity_test_entity_test1` FOREIGN KEY (`parent_test_row_id`, `parent_test_id`) REFERENCES `entity_test` (`id`, `entity_test_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -690,6 +692,7 @@ CREATE TABLE `entity_test` (
 
 LOCK TABLES `entity_test` WRITE;
 /*!40000 ALTER TABLE `entity_test` DISABLE KEYS */;
+INSERT INTO `entity_test` VALUES (1,1,1,1,'Top Level of: Root','This is the top level test for Root. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,0,0),(2,2,2,2,'Top Level of: Dakar Web','This is the top level test for Dakar Web. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,1,1),(3,3,3,3,'Top Level of: Login Screen','This is the top level test for Login Screen. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,2,2),(4,4,4,4,'User Name','Label for user name on the login screen','2021-05-16','-','-','-','User Name',0,'SB_1',NULL,NULL,3,3),(5,5,5,5,'User Name','Enter user name','2021-05-16','Enter data','steveb','-','-',0,'SB_1',NULL,NULL,3,3),(6,6,6,6,'User Password','Label for user password on the login screen','2021-05-16','-','-','-','Password',0,'SB_1',NULL,NULL,3,3),(7,7,7,7,'User Password','Enter password','2021-05-16','Enter data','1234','-','-',0,'SB_1',NULL,NULL,3,3),(8,8,8,8,'Top Level of: Login Button','This is the top level test for Login Button. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,3,3),(9,9,9,9,'Top Level of: Home Page','This is the top level test for Home Page. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,2,2),(10,10,10,10,'Top Level of: Home Page Info Bar','This is the top level test for Home Page Info Bar. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,9,9),(12,12,12,12,'Current Module Indicator','Shows the currently selected module','2021-05-16','-','-','-','Payroll',0,'SB_1',NULL,NULL,10,10),(13,13,13,13,'Top Level of: Menu Toggle','This is the top level test for Menu Toggle. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,10,10),(14,14,14,14,'Current Company','Shows the currently selected company','2021-05-16','Peform function based on value','-','-','Mars~Mars Incorporated Ltd',0,'SB_1',NULL,NULL,10,10),(15,15,15,15,'Top Level of: Home Page Top Right Nav Bar','This is the top level test for Home Page Top Right Nav Bar. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,9,9),(16,16,16,16,'Top Level of: Authorisations','This is the top level test for Authorisations. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(17,17,17,17,'Top Level of: Employee Creation Wizard','This is the top level test for Employee Creation Wizard. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(18,18,18,18,'Top Level of: Employee CV','This is the top level test for Employee CV. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(19,19,19,19,'Top Level of: Employee Grid View','This is the top level test for Employee Grid View. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(20,20,20,20,'Top Level of: Visual Reports','This is the top level test for Visual Reports. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(21,21,21,21,'Top Level of: Dakar Intelligence','This is the top level test for Dakar Intelligence. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(22,22,22,22,'Top Level of: Organisation Chart','This is the top level test for Organisation Chart. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(23,23,23,23,'Top Level of: My Company / Last Viewed','This is the top level test for My Company / Last Viewed. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(24,24,24,24,'Top Level of: All Notifications','This is the top level test for All Notifications. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(25,25,25,25,'Top Level of: New Employments','This is the top level test for New Employments. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(26,26,26,26,'Top Level of: Terminations','This is the top level test for Terminations. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(27,27,27,27,'Top Level of: Quick Links','This is the top level test for Quick Links. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(28,28,28,28,'Top Level of: User Avatar','This is the top level test for User Avatar. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,15,15),(29,29,29,29,'Top Level of: Main Menu','This is the top level test for Main Menu. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,9,9),(30,30,30,30,'Top Level of: Main Menu - Payroll','This is the top level test for Main Menu - Payroll. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,29,29),(31,31,31,31,'Top Level of: Employee List','This is the top level test for Employee List. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(32,32,32,32,'Top Level of: Documents','This is the top level test for Documents. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(33,33,33,33,'Top Level of: Employee Others','This is the top level test for Employee Others. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(34,34,34,34,'Top Level of: Payroll','This is the top level test for Payroll. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(35,35,35,35,'Top Level of: Payroll Statistics','This is the top level test for Payroll Statistics. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(36,36,36,36,'Top Level of: Absence Statistics','This is the top level test for Absence Statistics. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(37,37,37,37,'Top Level of: Reports','This is the top level test for Reports. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(38,38,38,38,'Top Level of: Monthly Reports','This is the top level test for Monthly Reports. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(39,39,39,39,'Top Level of: Yearly Reports','This is the top level test for Yearly Reports. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(40,40,40,40,'Top Level of: Bulk Updates','This is the top level test for Bulk Updates. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30),(41,41,41,41,'Top Level of: Settings','This is the top level test for Settings. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,30,30);
 /*!40000 ALTER TABLE `entity_test` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -745,6 +748,7 @@ CREATE TABLE `entity_test_has_one_or_more_test_categories` (
 
 LOCK TABLES `entity_test_has_one_or_more_test_categories` WRITE;
 /*!40000 ALTER TABLE `entity_test_has_one_or_more_test_categories` DISABLE KEYS */;
+INSERT INTO `entity_test_has_one_or_more_test_categories` VALUES (2,1,2,2),(5,2,3,3),(5,2,9,9),(6,1,3,3),(6,1,9,9),(7,1,8,8),(7,2,10,10),(7,1,15,15),(7,1,29,29),(7,1,30,30),(11,1,5,5),(11,1,7,7),(12,1,4,4),(12,1,6,6),(12,1,10,10),(12,1,12,12),(12,2,15,15),(12,2,29,29),(12,2,30,30),(13,1,16,16),(13,1,17,17),(13,1,18,18),(13,1,19,19),(13,1,20,20),(13,1,21,21),(13,1,22,22),(13,1,23,23),(13,1,24,24),(13,1,25,25),(13,1,26,26),(13,1,27,27),(13,1,28,28),(13,1,31,31),(13,1,32,32),(13,1,33,33),(13,1,34,34),(13,1,35,35),(13,1,36,36),(13,1,37,37),(13,1,38,38),(13,1,39,39),(13,1,40,40),(13,1,41,41);
 /*!40000 ALTER TABLE `entity_test_has_one_or_more_test_categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -773,6 +777,7 @@ CREATE TABLE `entity_test_has_version` (
 
 LOCK TABLES `entity_test_has_version` WRITE;
 /*!40000 ALTER TABLE `entity_test_has_version` DISABLE KEYS */;
+INSERT INTO `entity_test_has_version` VALUES (76,1,1),(77,2,2),(78,3,3),(79,4,4),(80,5,5),(81,6,6),(82,7,7),(83,8,8),(84,9,9),(85,10,10),(86,12,12),(87,14,14),(88,13,13),(89,15,15),(90,16,16),(91,17,17),(92,18,18),(93,19,19),(94,20,20),(95,21,21),(96,22,22),(97,23,23),(98,24,24),(99,25,25),(100,26,26),(101,27,27),(102,28,28),(103,29,29),(104,30,30),(105,31,31),(106,32,32),(107,33,33),(108,34,34),(109,35,35),(110,36,36),(111,37,37),(112,38,38),(113,39,39),(114,40,40),(115,41,41);
 /*!40000 ALTER TABLE `entity_test_has_version` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -938,6 +943,78 @@ DELIMITER ;
 /*!50003 SET collation_connection  = @saved_col_connection */ ;
 
 --
+-- Table structure for table `tbl_test_suite_has_child_suites_for_test_run`
+--
+
+DROP TABLE IF EXISTS `tbl_test_suite_has_child_suites_for_test_run`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `tbl_test_suite_has_child_suites_for_test_run` (
+  `test_suite_row_id` int(10) unsigned NOT NULL,
+  `test_suite_id` int(10) unsigned NOT NULL,
+  `entity_test_id` int(10) unsigned NOT NULL,
+  `entity_test_entity_test_id` int(10) unsigned NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tbl_test_suite_has_child_suites_for_test_run`
+--
+
+LOCK TABLES `tbl_test_suite_has_child_suites_for_test_run` WRITE;
+/*!40000 ALTER TABLE `tbl_test_suite_has_child_suites_for_test_run` DISABLE KEYS */;
+INSERT INTO `tbl_test_suite_has_child_suites_for_test_run` VALUES (3,3,4,4),(3,3,5,5),(3,3,6,6),(3,3,7,7),(3,3,8,8);
+/*!40000 ALTER TABLE `tbl_test_suite_has_child_suites_for_test_run` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `temp_test_in_test_run`
+--
+
+DROP TABLE IF EXISTS `temp_test_in_test_run`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `temp_test_in_test_run` (
+  `test_suite_row_id` int(10) unsigned,
+  `test_suite_id` int(10) unsigned,
+  `entity_test_row_id` int(10) unsigned NOT NULL DEFAULT '0',
+  `entity_test_id` int(10) unsigned NOT NULL,
+  `entity_id` int(10) unsigned NOT NULL,
+  `entity_entity_id` int(10) unsigned NOT NULL,
+  `entity_test_name` varchar(200) NOT NULL,
+  `version_number` varchar(11) DEFAULT NULL,
+  `description` text,
+  `created_on` date NOT NULL,
+  `test_function` varchar(250) NOT NULL COMMENT 'Value at the start of the test',
+  `data_in` varchar(1000) DEFAULT NULL COMMENT 'Expected value at the end of the test',
+  `data_out` varchar(1000) DEFAULT NULL COMMENT 'Value from another source',
+  `data_expected` varchar(1000) DEFAULT NULL,
+  `failure_halts_test` tinyint(4) NOT NULL DEFAULT '0',
+  `created_by_employee_id` varchar(45) NOT NULL,
+  `last_run_date` date DEFAULT NULL,
+  `last_run_time` time DEFAULT NULL,
+  `parent_test_row_id` int(10) unsigned DEFAULT NULL,
+  `parent_test_id` int(10) unsigned DEFAULT NULL,
+  `entity_type_entity_type_name` varchar(45) NOT NULL COMMENT 'The entiry''s parent.\nZero = no parent',
+  `entity_name` varchar(100) NOT NULL,
+  `last_tested_date` date DEFAULT NULL,
+  `last_tested_time` time DEFAULT NULL,
+  `has_tool_tip` varchar(5) DEFAULT 'FALSE',
+  `tool_tip_text` varchar(500) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `temp_test_in_test_run`
+--
+
+LOCK TABLES `temp_test_in_test_run` WRITE;
+/*!40000 ALTER TABLE `temp_test_in_test_run` DISABLE KEYS */;
+INSERT INTO `temp_test_in_test_run` VALUES (NULL,NULL,3,3,3,3,'Top Level of: Login Screen','1.0.0','This is the top level test for Login Screen. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,2,2,'Form','Login Screen','1900-01-01','00:00:00',NULL,NULL),(3,3,4,4,4,4,'User Name','1.0.0','Label for user name on the login screen','2021-05-16','-','-','-','User Name',0,'SB_1',NULL,NULL,3,3,'Label','User Name','1900-01-01','00:00:00','False','-'),(3,3,5,5,5,5,'User Name','1.0.0','Enter user name','2021-05-16','Enter data','steveb','-','-',0,'SB_1',NULL,NULL,3,3,'Text In','User Name','1900-01-01','00:00:00','False','-'),(3,3,6,6,6,6,'User Password','1.0.0','Label for user password on the login screen','2021-05-16','-','-','-','Password',0,'SB_1',NULL,NULL,3,3,'Label','User Password','1900-01-01','00:00:00',NULL,NULL),(3,3,7,7,7,7,'User Password','1.0.0','Enter password','2021-05-16','Enter data','1234','-','-',0,'SB_1',NULL,NULL,3,3,'Text In','User Password','1900-01-01','00:00:00',NULL,NULL),(3,3,8,8,8,8,'Top Level of: Login Button','1.0.0','This is the top level test for Login Button. For this to pass all its children must pass.','2021-05-16','','','','',0,'SB_1',NULL,NULL,3,3,'Button - Redirect','Login Button','1900-01-01','00:00:00','True','Click to login');
+/*!40000 ALTER TABLE `temp_test_in_test_run` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `test_insert_has_parent`
 --
 
@@ -975,7 +1052,7 @@ CREATE TABLE `test_run` (
   `comments` varchar(1000) DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -984,6 +1061,7 @@ CREATE TABLE `test_run` (
 
 LOCK TABLES `test_run` WRITE;
 /*!40000 ALTER TABLE `test_run` DISABLE KEYS */;
+INSERT INTO `test_run` VALUES (1,'Login','Login form');
 /*!40000 ALTER TABLE `test_run` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1013,6 +1091,7 @@ CREATE TABLE `test_run_has_test_suite` (
 
 LOCK TABLES `test_run_has_test_suite` WRITE;
 /*!40000 ALTER TABLE `test_run_has_test_suite` DISABLE KEYS */;
+INSERT INTO `test_run_has_test_suite` VALUES (3,3,1);
 /*!40000 ALTER TABLE `test_run_has_test_suite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1071,7 +1150,7 @@ CREATE TABLE `test_suite` (
   KEY `fk_test_suite_test_suite3_idx` (`test_suite_id`),
   KEY `fk_test_suite_test_suite1_idx` (`parent_id`,`parent_test_suite_id`),
   CONSTRAINT `fk_test_suite_test_suite1` FOREIGN KEY (`parent_id`, `parent_test_suite_id`) REFERENCES `test_suite` (`id`, `test_suite_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1080,6 +1159,7 @@ CREATE TABLE `test_suite` (
 
 LOCK TABLES `test_suite` WRITE;
 /*!40000 ALTER TABLE `test_suite` DISABLE KEYS */;
+INSERT INTO `test_suite` VALUES (1,1,'Root','ADD TEST SUITE NOTES',0,0),(2,2,'Dakar Web','ADD TEST SUITE NOTES',1,1),(3,3,'Login Screen','ADD TEST SUITE NOTES',2,2),(8,8,'Login Button','ADD TEST SUITE NOTES',3,3),(9,9,'Home Page','ADD TEST SUITE NOTES',2,2),(10,10,'Home Page Info Bar','ADD TEST SUITE NOTES',9,9),(13,13,'Menu Toggle','ADD TEST SUITE NOTES',10,10),(15,15,'Home Page Top Right Nav Bar','ADD TEST SUITE NOTES',9,9),(16,16,'Authorisations','ADD TEST SUITE NOTES',15,15),(17,17,'Employee Creation Wizard','ADD TEST SUITE NOTES',15,15),(18,18,'Employee CV','ADD TEST SUITE NOTES',15,15),(19,19,'Employee Grid View','ADD TEST SUITE NOTES',15,15),(20,20,'Visual Reports','ADD TEST SUITE NOTES',15,15),(21,21,'Dakar Intelligence','ADD TEST SUITE NOTES',15,15),(22,22,'Organisation Chart','ADD TEST SUITE NOTES',15,15),(23,23,'My Company / Last Viewed','ADD TEST SUITE NOTES',15,15),(24,24,'All Notifications','ADD TEST SUITE NOTES',15,15),(25,25,'New Employments','ADD TEST SUITE NOTES',15,15),(26,26,'Terminations','ADD TEST SUITE NOTES',15,15),(27,27,'Quick Links','ADD TEST SUITE NOTES',15,15),(28,28,'User Avatar','ADD TEST SUITE NOTES',15,15),(29,29,'Main Menu','ADD TEST SUITE NOTES',9,9),(30,30,'Main Menu - Payroll','ADD TEST SUITE NOTES',29,29),(31,31,'Employee List','ADD TEST SUITE NOTES',30,30),(32,32,'Documents','ADD TEST SUITE NOTES',30,30),(33,33,'Employee Others','ADD TEST SUITE NOTES',30,30),(34,34,'Payroll','ADD TEST SUITE NOTES',30,30),(35,35,'Payroll Statistics','ADD TEST SUITE NOTES',30,30),(36,36,'Absence Statistics','ADD TEST SUITE NOTES',30,30),(37,37,'Reports','ADD TEST SUITE NOTES',30,30),(38,38,'Monthly Reports','ADD TEST SUITE NOTES',30,30),(39,39,'Yearly Reports','ADD TEST SUITE NOTES',30,30),(40,40,'Bulk Updates','ADD TEST SUITE NOTES',30,30),(41,41,'Settings','ADD TEST SUITE NOTES',30,30);
 /*!40000 ALTER TABLE `test_suite` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1091,17 +1171,20 @@ DROP TABLE IF EXISTS `test_suite_has_entity_test`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
  SET character_set_client = utf8mb4 ;
 CREATE TABLE `test_suite_has_entity_test` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `test_suite_row_id` int(10) unsigned NOT NULL,
   `test_suite_id` int(10) unsigned NOT NULL,
   `entity_test_id` int(10) unsigned NOT NULL,
   `entity_test_entity_test_id` int(10) unsigned NOT NULL,
   `entity_test_entity_id` int(10) unsigned NOT NULL,
   `entity_test_entity_entity_id` int(10) unsigned NOT NULL,
-  PRIMARY KEY (`test_suite_row_id`,`test_suite_id`,`entity_test_id`,`entity_test_entity_test_id`),
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `fk_test_suite_has_entity_test_entity_test1_idx` (`entity_test_id`,`entity_test_entity_test_id`,`entity_test_entity_id`,`entity_test_entity_entity_id`),
+  KEY `fk_test_suite_has_entity_test_test_suite1` (`test_suite_row_id`,`test_suite_id`),
   CONSTRAINT `fk_test_suite_has_entity_test_entity_test1` FOREIGN KEY (`entity_test_id`, `entity_test_entity_test_id`, `entity_test_entity_id`, `entity_test_entity_entity_id`) REFERENCES `entity_test` (`id`, `entity_test_id`, `entity_id`, `entity_entity_id`),
   CONSTRAINT `fk_test_suite_has_entity_test_test_suite1` FOREIGN KEY (`test_suite_row_id`, `test_suite_id`) REFERENCES `test_suite` (`id`, `test_suite_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1110,6 +1193,7 @@ CREATE TABLE `test_suite_has_entity_test` (
 
 LOCK TABLES `test_suite_has_entity_test` WRITE;
 /*!40000 ALTER TABLE `test_suite_has_entity_test` DISABLE KEYS */;
+INSERT INTO `test_suite_has_entity_test` VALUES (1,1,1,2,2,2,2),(2,2,2,3,3,3,3),(3,3,3,4,4,4,4),(4,3,3,5,5,5,5),(5,3,3,6,6,6,6),(6,3,3,7,7,7,7),(7,3,3,8,8,8,8),(8,2,2,9,9,9,9),(9,9,9,10,10,10,10),(10,10,10,12,12,12,12),(11,10,10,14,14,14,14),(12,10,10,13,13,13,13),(13,9,9,15,15,15,15),(14,15,15,16,16,16,16),(15,15,15,17,17,17,17),(16,15,15,18,18,18,18),(17,15,15,19,19,19,19),(18,15,15,20,20,20,20),(19,15,15,21,21,21,21),(20,15,15,22,22,22,22),(21,15,15,23,23,23,23),(22,15,15,24,24,24,24),(23,15,15,25,25,25,25),(24,15,15,26,26,26,26),(25,15,15,27,27,27,27),(26,15,15,28,28,28,28),(27,9,9,29,29,29,29),(28,29,29,30,30,30,30),(29,30,30,31,31,31,31),(30,30,30,32,32,32,32),(31,30,30,33,33,33,33),(32,30,30,34,34,34,34),(33,30,30,35,35,35,35),(34,30,30,36,36,36,36),(35,30,30,37,37,37,37),(36,30,30,38,38,38,38),(37,30,30,39,39,39,39),(38,30,30,40,40,40,40),(39,30,30,41,41,41,41);
 /*!40000 ALTER TABLE `test_suite_has_entity_test` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1138,6 +1222,7 @@ CREATE TABLE `test_suite_has_version` (
 
 LOCK TABLES `test_suite_has_version` WRITE;
 /*!40000 ALTER TABLE `test_suite_has_version` DISABLE KEYS */;
+INSERT INTO `test_suite_has_version` VALUES (42,1,1),(43,2,2),(44,3,3),(45,8,8),(46,9,9),(47,10,10),(48,13,13),(49,15,15),(50,16,16),(51,17,17),(52,18,18),(53,19,19),(54,20,20),(55,21,21),(56,22,22),(57,23,23),(58,24,24),(59,25,25),(60,26,26),(61,27,27),(62,28,28),(63,29,29),(64,30,30),(65,31,31),(66,32,32),(67,33,33),(68,34,34),(69,35,35),(70,36,36),(71,37,37),(72,38,38),(73,39,39),(74,40,40),(75,41,41);
 /*!40000 ALTER TABLE `test_suite_has_version` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1158,7 +1243,7 @@ CREATE TABLE `version` (
   `build` smallint(6) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=118 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -1167,7 +1252,7 @@ CREATE TABLE `version` (
 
 LOCK TABLES `version` WRITE;
 /*!40000 ALTER TABLE `version` DISABLE KEYS */;
-INSERT INTO `version` VALUES (1,'Root','','ENTITY',1,0,0),(2,'Dakar Web','','ENTITY',1,0,0),(3,'Login Screen','','ENTITY',1,0,0),(4,'User Name','','ENTITY',1,0,0),(5,'User Name','','ENTITY',1,0,0),(6,'User Password','','ENTITY',1,0,0),(7,'User Password','','ENTITY',1,0,0),(8,'Login Button','','ENTITY',1,0,0),(9,'Home Page','','ENTITY',1,0,0),(10,'Home Page Info Bar','','ENTITY',1,0,0),(11,'Dakar Logo','','ENTITY',1,0,0),(12,'Current Module Indicator','','ENTITY',1,0,0),(13,'Menu Toggle','','ENTITY',1,0,0),(14,'Current Company','','ENTITY',1,0,0),(15,'Home Page Top Right Nav Bar','','ENTITY',1,0,0),(16,'Authorisations','','ENTITY',1,0,0),(17,'Employee Creation Wizard','','ENTITY',1,0,0),(18,'Employee CV','','ENTITY',1,0,0),(19,'Employee Grid View','','ENTITY',1,0,0),(20,'Visual Reports','','ENTITY',1,0,0),(21,'Dakar Intelligence','','ENTITY',1,0,0),(22,'Organisation Chart','','ENTITY',1,0,0),(23,'My Company / Last Viewed','','ENTITY',1,0,0),(24,'All Notifications','','ENTITY',1,0,0),(25,'New Employments','','ENTITY',1,0,0),(26,'Terminations','','ENTITY',1,0,0),(27,'Quick Links','','ENTITY',1,0,0),(28,'User Avatar','','ENTITY',1,0,0),(29,'Main Menu','','ENTITY',1,0,0),(30,'Main Menu - Payroll','','ENTITY',1,0,0),(31,'Employee List','','ENTITY',1,0,0),(32,'Documents','','ENTITY',1,0,0),(33,'Employee Others','','ENTITY',1,0,0),(34,'Payroll','','ENTITY',1,0,0),(35,'Payroll Statistics','','ENTITY',1,0,0),(36,'Absence Statistics','','ENTITY',1,0,0),(37,'Reports','','ENTITY',1,0,0),(38,'Monthly Reports','','ENTITY',1,0,0),(39,'Yearly Reports','','ENTITY',1,0,0),(40,'Bulk Updates','','ENTITY',1,0,0),(41,'Settings','','ENTITY',1,0,0);
+INSERT INTO `version` VALUES (1,'Root','','ENTITY',1,0,0),(2,'Dakar Web','','ENTITY',1,0,0),(3,'Login Screen','','ENTITY',1,0,0),(4,'User Name','','ENTITY',1,0,0),(5,'User Name','','ENTITY',1,0,0),(6,'User Password','','ENTITY',1,0,0),(7,'User Password','','ENTITY',1,0,0),(8,'Login Button','','ENTITY',1,0,0),(9,'Home Page','','ENTITY',1,0,0),(10,'Home Page Info Bar','','ENTITY',1,0,0),(11,'Dakar Logo','','ENTITY',1,0,0),(12,'Current Module Indicator','','ENTITY',1,0,0),(13,'Menu Toggle','','ENTITY',1,0,0),(14,'Current Company','','ENTITY',1,0,0),(15,'Home Page Top Right Nav Bar','','ENTITY',1,0,0),(16,'Authorisations','','ENTITY',1,0,0),(17,'Employee Creation Wizard','','ENTITY',1,0,0),(18,'Employee CV','','ENTITY',1,0,0),(19,'Employee Grid View','','ENTITY',1,0,0),(20,'Visual Reports','','ENTITY',1,0,0),(21,'Dakar Intelligence','','ENTITY',1,0,0),(22,'Organisation Chart','','ENTITY',1,0,0),(23,'My Company / Last Viewed','','ENTITY',1,0,0),(24,'All Notifications','','ENTITY',1,0,0),(25,'New Employments','','ENTITY',1,0,0),(26,'Terminations','','ENTITY',1,0,0),(27,'Quick Links','','ENTITY',1,0,0),(28,'User Avatar','','ENTITY',1,0,0),(29,'Main Menu','','ENTITY',1,0,0),(30,'Main Menu - Payroll','','ENTITY',1,0,0),(31,'Employee List','','ENTITY',1,0,0),(32,'Documents','','ENTITY',1,0,0),(33,'Employee Others','','ENTITY',1,0,0),(34,'Payroll','','ENTITY',1,0,0),(35,'Payroll Statistics','','ENTITY',1,0,0),(36,'Absence Statistics','','ENTITY',1,0,0),(37,'Reports','','ENTITY',1,0,0),(38,'Monthly Reports','','ENTITY',1,0,0),(39,'Yearly Reports','','ENTITY',1,0,0),(40,'Bulk Updates','','ENTITY',1,0,0),(41,'Settings','','ENTITY',1,0,0),(42,'Root','No existing version. New major version of Root','TEST_SUITE',1,0,0),(43,'Dakar Web','No existing version. New major version of Dakar Web','TEST_SUITE',1,0,0),(44,'Login Screen','No existing version. New major version of Login Screen','TEST_SUITE',1,0,0),(45,'Login Button','No existing version. New major version of Login Button','TEST_SUITE',1,0,0),(46,'Home Page','No existing version. New major version of Home Page','TEST_SUITE',1,0,0),(47,'Home Page Info Bar','No existing version. New major version of Home Page Info Bar','TEST_SUITE',1,0,0),(48,'Menu Toggle','No existing version. New major version of Menu Toggle','TEST_SUITE',1,0,0),(49,'Home Page Top Right Nav Bar','No existing version. New major version of Home Page Top Right Nav Bar','TEST_SUITE',1,0,0),(50,'Authorisations','No existing version. New major version of Authorisations','TEST_SUITE',1,0,0),(51,'Employee Creation Wizard','No existing version. New major version of Employee Creation Wizard','TEST_SUITE',1,0,0),(52,'Employee CV','No existing version. New major version of Employee CV','TEST_SUITE',1,0,0),(53,'Employee Grid View','No existing version. New major version of Employee Grid View','TEST_SUITE',1,0,0),(54,'Visual Reports','No existing version. New major version of Visual Reports','TEST_SUITE',1,0,0),(55,'Dakar Intelligence','No existing version. New major version of Dakar Intelligence','TEST_SUITE',1,0,0),(56,'Organisation Chart','No existing version. New major version of Organisation Chart','TEST_SUITE',1,0,0),(57,'My Company / Last Viewed','No existing version. New major version of My Company / Last Viewed','TEST_SUITE',1,0,0),(58,'All Notifications','No existing version. New major version of All Notifications','TEST_SUITE',1,0,0),(59,'New Employments','No existing version. New major version of New Employments','TEST_SUITE',1,0,0),(60,'Terminations','No existing version. New major version of Terminations','TEST_SUITE',1,0,0),(61,'Quick Links','No existing version. New major version of Quick Links','TEST_SUITE',1,0,0),(62,'User Avatar','No existing version. New major version of User Avatar','TEST_SUITE',1,0,0),(63,'Main Menu','No existing version. New major version of Main Menu','TEST_SUITE',1,0,0),(64,'Main Menu - Payroll','No existing version. New major version of Main Menu - Payroll','TEST_SUITE',1,0,0),(65,'Employee List','No existing version. New major version of Employee List','TEST_SUITE',1,0,0),(66,'Documents','No existing version. New major version of Documents','TEST_SUITE',1,0,0),(67,'Employee Others','No existing version. New major version of Employee Others','TEST_SUITE',1,0,0),(68,'Payroll','No existing version. New major version of Payroll','TEST_SUITE',1,0,0),(69,'Payroll Statistics','No existing version. New major version of Payroll Statistics','TEST_SUITE',1,0,0),(70,'Absence Statistics','No existing version. New major version of Absence Statistics','TEST_SUITE',1,0,0),(71,'Reports','No existing version. New major version of Reports','TEST_SUITE',1,0,0),(72,'Monthly Reports','No existing version. New major version of Monthly Reports','TEST_SUITE',1,0,0),(73,'Yearly Reports','No existing version. New major version of Yearly Reports','TEST_SUITE',1,0,0),(74,'Bulk Updates','No existing version. New major version of Bulk Updates','TEST_SUITE',1,0,0),(75,'Settings','No existing version. New major version of Settings','TEST_SUITE',1,0,0),(76,'Top Level of: Root','No existing version. New major version of Top Level of: Root','TEST',1,0,0),(77,'Top Level of: Dakar Web','No existing version. New major version of Top Level of: Dakar Web','TEST',1,0,0),(78,'Top Level of: Login Screen','No existing version. New major version of Top Level of: Login Screen','TEST',1,0,0),(79,'User Name','No existing version. New major version of User Name','TEST',1,0,0),(80,'User Name','No existing version. New major version of User Name','TEST',1,0,0),(81,'User Password','No existing version. New major version of User Password','TEST',1,0,0),(82,'User Password','No existing version. New major version of User Password','TEST',1,0,0),(83,'Top Level of: Login Button','No existing version. New major version of Top Level of: Login Button','TEST',1,0,0),(84,'Top Level of: Home Page','No existing version. New major version of Top Level of: Home Page','TEST',1,0,0),(85,'Top Level of: Home Page Info Bar','No existing version. New major version of Top Level of: Home Page Info Bar','TEST',1,0,0),(86,'Current Module Indicator','No existing version. New major version of Current Module Indicator','TEST',1,0,0),(87,'Current Company','No existing version. New major version of Current Company','TEST',1,0,0),(88,'Top Level of: Menu Toggle','No existing version. New major version of Top Level of: Menu Toggle','TEST',1,0,0),(89,'Top Level of: Home Page Top Right Nav Bar','No existing version. New major version of Top Level of: Home Page Top Right Nav Bar','TEST',1,0,0),(90,'Top Level of: Authorisations','No existing version. New major version of Top Level of: Authorisations','TEST',1,0,0),(91,'Top Level of: Employee Creation Wizard','No existing version. New major version of Top Level of: Employee Creation Wizard','TEST',1,0,0),(92,'Top Level of: Employee CV','No existing version. New major version of Top Level of: Employee CV','TEST',1,0,0),(93,'Top Level of: Employee Grid View','No existing version. New major version of Top Level of: Employee Grid View','TEST',1,0,0),(94,'Top Level of: Visual Reports','No existing version. New major version of Top Level of: Visual Reports','TEST',1,0,0),(95,'Top Level of: Dakar Intelligence','No existing version. New major version of Top Level of: Dakar Intelligence','TEST',1,0,0),(96,'Top Level of: Organisation Chart','No existing version. New major version of Top Level of: Organisation Chart','TEST',1,0,0),(97,'Top Level of: My Company / Last Viewed','No existing version. New major version of Top Level of: My Company / Last Viewed','TEST',1,0,0),(98,'Top Level of: All Notifications','No existing version. New major version of Top Level of: All Notifications','TEST',1,0,0),(99,'Top Level of: New Employments','No existing version. New major version of Top Level of: New Employments','TEST',1,0,0),(100,'Top Level of: Terminations','No existing version. New major version of Top Level of: Terminations','TEST',1,0,0),(101,'Top Level of: Quick Links','No existing version. New major version of Top Level of: Quick Links','TEST',1,0,0),(102,'Top Level of: User Avatar','No existing version. New major version of Top Level of: User Avatar','TEST',1,0,0),(103,'Top Level of: Main Menu','No existing version. New major version of Top Level of: Main Menu','TEST',1,0,0),(104,'Top Level of: Main Menu - Payroll','No existing version. New major version of Top Level of: Main Menu - Payroll','TEST',1,0,0),(105,'Top Level of: Employee List','No existing version. New major version of Top Level of: Employee List','TEST',1,0,0),(106,'Top Level of: Documents','No existing version. New major version of Top Level of: Documents','TEST',1,0,0),(107,'Top Level of: Employee Others','No existing version. New major version of Top Level of: Employee Others','TEST',1,0,0),(108,'Top Level of: Payroll','No existing version. New major version of Top Level of: Payroll','TEST',1,0,0),(109,'Top Level of: Payroll Statistics','No existing version. New major version of Top Level of: Payroll Statistics','TEST',1,0,0),(110,'Top Level of: Absence Statistics','No existing version. New major version of Top Level of: Absence Statistics','TEST',1,0,0),(111,'Top Level of: Reports','No existing version. New major version of Top Level of: Reports','TEST',1,0,0),(112,'Top Level of: Monthly Reports','No existing version. New major version of Top Level of: Monthly Reports','TEST',1,0,0),(113,'Top Level of: Yearly Reports','No existing version. New major version of Top Level of: Yearly Reports','TEST',1,0,0),(114,'Top Level of: Bulk Updates','No existing version. New major version of Top Level of: Bulk Updates','TEST',1,0,0),(115,'Top Level of: Settings','No existing version. New major version of Top Level of: Settings','TEST',1,0,0);
 /*!40000 ALTER TABLE `version` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -1180,4 +1265,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-16 12:35:30
+-- Dump completed on 2021-05-17  6:47:33
