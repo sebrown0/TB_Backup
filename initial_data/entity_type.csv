@@ -25,3 +25,9 @@ id,entity_type_name,entity_type_parent_id
 24,Button - Display,21
 25,Button - Function,21
 26,Function,1
+27, Titlebar,6
+28, Header 1,6
+29, Header 2,6
+30, Header 3,6
+31, Header 4,6
+32, Header 5,6
