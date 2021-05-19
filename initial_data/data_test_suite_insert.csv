@@ -1,17 +1,23 @@
 row_id,test_suite_id,test_suite_name,test_suite_parent_row_id,test_suite_parent_id,test_suite_notes,category_type_name,endl
-106,106,Employee Creation Wizard,17,17,Top level of ECW,Form,\N
-49,49,Employee Creation Wizard - Step 1,106,106,Step 1 of ECW,Function,\N
-59,59,Back,49,49,Go back a step,Button - Function,\N
-60,60,Continue,49,49,Go forward a step,Button - Function,\N
-61,61,Employee Creation Wizard - Step 2,106,106,Step 2 of ECW,Function,\N
-71,71,Back,61,61,Go back a step,Button - Function,\N
-72,72,Continue,61,61,Go forward a step,Button - Function,\N
-73,73,Employee Creation Wizard - Step 3,106,106,Step 3 of ECW,Function,\N
-84,84,Back,73,73,Go back a step,Button - Function,\N
-85,85,Continue,73,73,Go forward a step,Button - Function,\N
-86,86,Employee Creation Wizard - Step 4,106,106,Step 4 of ECW,Function,\N
-94,94,Back,86,86,Go back a step,Button - Function,\N
-95,95,Continue,86,86,Go forward a step,Button - Function,\N
-96,96,Employee Creation Wizard - Step 5,106,106,Step 5 of ECW,Function,\N
-99,99,Back,96,96,Go back a step,Button - Function,\N
-100,100,Create Employee,96,96,Create the employee if all the data is valid,Button - Function,\N
+108,108,Employee CV,18,18,Overall test for the employee CV form,Form,\N
+116,116,Accept Criteria,108,108,Test the function of the accept criteria button,Button - Function,\N
+118,118,Bio Info,108,108,Test all the bio info,Container,\N
+127,127,Bio Content,118,118,Test all the bio content,Container,\N
+128,128,Accordion - CV,108,108,Test accordion CV,Accordion,\N
+129,129,Accordion - CV - Career,128,128,Test accordion key: career,Accordion Key,\N
+130,130,Grid - Career,129,129,Top level of grid,Grid,\N
+131,131,Acc Key - CV - Allowance,128,128,Test accordion key: allowance,Accordion Key,\N
+132,132,Grid - Allowance,131,131,Top level of grid,Grid,\N
+133,133,Acc Key - CV - Salary,128,128,Test accordion key: salary,Accordion Key,\N
+134,134,Grid - Salary,133,133,Top level of grid,Grid,\N
+135,135,Acc Key - Emp Schedule,128,128,Test accordion key: schedule,Accordion Key,\N
+136,136,Grid - Emp Schedule,135,135,Top level of grid,Grid,\N
+137,137,Acc Key - Working Permit,128,128,Test accordion key: work permit,Accordion Key,\N
+138,138,Grid - Work Permit,137,136,Top level of grid,Grid,\N
+139,139,Save,108,108,Test save button and modal form after,Button - Function,\N
+140,140,Form - Save,139,139,Save form,Modal Form,\N
+141,141,Form - Save - Header,140,140,Test the modal form header,Modal Header,\N
+143,143,Form - Save - Body,140,140,Test the modal form body,Modal Body,\N
+144,144,Form - Save - Footer,140,140,Test the modal form footer,Modal Footer,\N
+145,145,Button Ok,144,144,Test the function of the Ok button,Button - Function,\N
+146,146,Button Cancel,144,144,Test the function of the save button,Button - Function,\N

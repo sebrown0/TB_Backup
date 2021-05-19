@@ -1,60 +1,39 @@
 id,entity_test_row_id,entity_test_id,entity_test_name,entity_id,entity_entity_id,created_by_employee_id,entity_test_parent_row_id,entity_test_parent_id,description,function,data_in,data_out,data_expected,failure_halts_test,test_category_primary,test_category_secondary,test_created,endl
-49,106,106,Top Level of: Employee Creation Wizard,106,106,SB_1,17,17,This is the top level test for Employee Creation Wizard. For this to pass all its children must pass.,,,,,0,Group Controls,Group Data,2021-05-18,\N
-50,107,107,Employee Creation Wizard - Title,107,107,SB_1,106,106,Is the title correct,-,-,-,Employee Creation Wizard,0,N\A  ,N\A,2021-05-18,\N
-51,49,49,Top Level of: Employee Creation Wizard - Step 1,49,49,SB_1,106,106,This is the top level test for Employee Creation Wizard - Step 1. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,2021-05-18,\N
-52,101,101,Heading ECW Step 1,101,101,SB_1,49,49,Is the heading correct,-,-,-,Basic Details,0,N\A  ,N\A,2021-05-18,\N
-53,50,50,Name,50,50,SB_1,49,49,Should be able to enter the employee name,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-54,51,51,Surname,51,51,SB_1,49,49,Should be able to enter the employee surname,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-55,52,52,Identity Card Number,52,52,SB_1,49,49,Should be able to enter the employee id card num. Should error if not valid.,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-56,53,53,Employee Code,53,53,SB_1,49,49,Should be able to enter the employee code. Should error if not valid code.,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-57,54,54,Address,54,54,SB_1,49,49,Should be able to enter the employee address - number,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-58,55,55,Street,55,55,SB_1,49,49,Should be able to enter the employee address - street,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-59,56,56,Post Code,56,56,SB_1,49,49,Should be able to enter the employee post code,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-60,57,57,Select A Town,57,57,SB_1,49,49,Should be able to select a town from a populated list,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-61,58,58,Select A Country,58,58,SB_1,49,49,Should be able to select a country,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-62,59,59,Top Level of: Back,59,59,SB_1,49,49,This is the top level test for Back. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
-63,60,60,Top Level of: Continue,60,60,SB_1,49,49,This is the top level test for Continue. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
-64,61,61,Top Level of: Employee Creation Wizard - Step 2,61,61,SB_1,106,106,This is the top level test for Employee Creation Wizard - Step 2. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,2021-05-18,\N
-65,102,102,Heading ECW Step 2,102,102,SB_1,61,61,Is the heading correct,-,-,-,Basic Details,0,N\A  ,N\A,2021-05-18,\N
-66,62,62,Select A Gender,62,62,SB_1,61,61,Should be able to select a gender,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-67,63,63,Date Of Birth,63,63,SB_1,61,61,Should be able to enter a DOB. Should error if does not make sense,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-68,64,64,Date Of Employment,64,64,SB_1,61,61,Should be able to enter a DOE. Should error if does not make sense,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-69,65,65,Tax Number,65,65,SB_1,61,61,Should be able to enter a tax number. Should error if does not make sense,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-70,66,66,NI Number,66,66,SB_1,61,61,Should be able to enter a NI number. Should error if does not make sense,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-71,67,67,Select A Bank,67,67,SB_1,61,61,Should be able to select a bank from the list,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-72,68,68,IBAN Number,68,68,SB_1,61,61,Should be able to enter an IBAN,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-73,69,69,Email Address,69,69,SB_1,61,61,Should be able to enter an email address. Should error if not valid.,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-74,70,70,Mobile Number,70,70,SB_1,61,61,Should be able to enter a mobile number. Should error if not valid.,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-75,71,71,Top Level of: Back,71,71,SB_1,61,61,This is the top level test for Back. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
-76,72,72,Top Level of: Continue,72,72,SB_1,61,61,This is the top level test for Continue. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
-77,73,73,Top Level of: Employee Creation Wizard - Step 3,73,73,SB_1,106,106,This is the top level test for Employee Creation Wizard - Step 3. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,2021-05-18,\N
-78,103,103,Heading ECW Step 3,103,103,SB_1,73,73,Is the heading correct,-,-,-,Payroll Related Details,0,N\A  ,N\A,2021-05-18,\N
-79,74,74,Select A Tax Status,74,74,SB_1,73,73,Should be able to select a tax status from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-80,75,75,Select An Employment Type,75,75,SB_1,73,73,Should be able to select an employement type from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-81,76,76,Select Company,76,76,SB_1,73,73,Should be able to select a company from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-82,77,77,Select A Paygroup,77,77,SB_1,73,73,Should be able to select a paygroup from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-83,78,78,Select A Department,78,78,SB_1,73,73,Should be able to select a department from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-84,79,79,Select a Schedule,79,79,SB_1,73,73,Should be able to select a schedule from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-85,80,80,Full or Part Timer ?,80,80,SB_1,73,73,Should be able to select if the emp is full or part time from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-86,81,81,Special Part Timer,81,81,SB_1,73,73,Should be able to select if the emp is a special part timer from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-87,82,82,Select a Grade,82,82,SB_1,73,73,Should be able to select a grade from a populated list (IF SETUP).,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-88,83,83,Select a Cost Center,83,83,SB_1,73,73,Should be able to select a cost center from a populated list (IF SETUP).,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-89,84,84,Top Level of: Back,84,84,SB_1,73,73,This is the top level test for Back. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
-90,85,85,Top Level of: Continue,85,85,SB_1,73,73,This is the top level test for Continue. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
-91,86,86,Top Level of: Employee Creation Wizard - Step 4,86,86,SB_1,106,106,This is the top level test for Employee Creation Wizard - Step 4. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,2021-05-18,\N
-92,104,104,Heading ECW Step 4,104,104,SB_1,86,86,Is the heading correct,-,-,-,Permanent Allowances,0,N\A  ,N\A,2021-05-18,\N
-93,87,87,Taxable Allowance 1 (Permenant),87,87,SB_1,86,86,Should be able to choose a taxable allowance from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-94,88,88,Allowance Amount - Permanent,88,88,SB_1,86,86,Should be able to enter the amount. Should error if not reasonable value.,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-95,89,89,Taxable Allowance 2 (Permenant),89,89,SB_1,86,86,Should be able to choose a taxable allowance from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-96,90,90,Allowance Amount - Permanent,90,90,SB_1,86,86,Should be able to enter the amount. Should error if not reasonable value.,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-97,91,91,Non Taxable Allowance 1 (Permenant),91,91,SB_1,86,86,Should be able to choose a non taxable allowance from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-98,92,92,Allowance Amount - Permanent,92,92,SB_1,86,86,Should be able to enter the amount. Should error if not reasonable value.,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-99,93,93,Non Taxable Allowance 2 (Permenant),93,93,SB_1,86,86,Should be able to choose a non taxable allowance from a populated list.,Display data,-,-,TODO - Enter list of data separated by a ~,0,Data Out,Data In,2021-05-18,\N
-100,94,94,Top Level of: Back,94,94,SB_1,86,86,This is the top level test for Back. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
-101,95,95,Top Level of: Continue,95,95,SB_1,86,86,This is the top level test for Continue. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
-102,96,96,Top Level of: Employee Creation Wizard - Step 5,96,96,SB_1,106,106,This is the top level test for Employee Creation Wizard - Step 5. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,2021-05-18,\N
-103,105,105,Heading ECW Step 5,105,105,SB_1,96,96,Is the heading correct,-,-,-,Salary Details,0,N\A  ,N\A,2021-05-18,\N
-104,97,97,Annual Salary,97,97,SB_1,96,96,Should be able to enter the amount. Should error if not reasonable value.,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-105,98,98,Hourly Rate,98,98,SB_1,96,96,Should be able to enter the amount. Should error if not reasonable value.,Enter data,TODO - Enter text that should be entered.,-,-,0,Data In,N\A,2021-05-18,\N
-106,99,99,Top Level of: Back,99,99,SB_1,96,96,This is the top level test for Back. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
-107,100,100,Top Level of: Create Employee,100,100,SB_1,96,96,This is the top level test for Create Employee. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,2021-05-18,\N
+108,108,108,Top Level of: Employee CV,108,108,SB_1,18,18,This is the top level test for Employee CV. For this to pass all its children must pass.,,,,,0,Group Controls,Group Data,19/05/2021,\N
+109,109,109,Employee CV - Title,109,109,SB_1,108,108,Should display title,-,-,-,Employee Payroll CV,0,N\A  ,N\A,19/05/2021,\N
+110,110,110,Company - Label,110,110,SB_1,108,108,Should display label value,-,-,-,Company,0,Data Out,N\A,19/05/2021,\N
+111,111,111,Company - List,111,111,SB_1,108,108,Should be able to choose from a populated list,Display data,-,-,Mars Northern Products Ltd~Mars Incorporated Ltd,0,Data Out,Data In,19/05/2021,\N
+112,112,112,Paygroup - Label,112,112,SB_1,108,108,Should display label value,-,-,-,Paygroup,0,Data Out,N\A,19/05/2021,\N
+113,113,113,Paygroup - List,113,113,SB_1,108,108,Should be able to choose from a populated list,Display data,-,-,Monthly Paygroup,0,Data Out,Data In,19/05/2021,\N
+114,114,114,Employee - Label,114,114,SB_1,108,108,Should display label value,-,-,-,Employees,0,Data Out,N\A,19/05/2021,\N
+115,115,115,Employee - List,115,115,SB_1,108,108,Should be able to choose from a populated list,Display data,-,-,#INF#,0,Data Out,Data In,19/05/2021,\N
+116,116,116,Top Level of: Accept Criteria,116,116,SB_1,108,108,This is the top level test for Accept Criteria. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,19/05/2021,\N
+117,117,117,Accept Criteria - Text,117,117,SB_1,116,116,TODO - Enter Description,-,-,-,Accept Criteria,0,N\A  ,N\A,19/05/2021,\N
+118,118,118,Top Level of: Bio Info,118,118,SB_1,108,108,This is the top level test for Bio Info. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+120,120,120,Employee Name,120,120,SB_1,118,118,Should display employee name,-,-,-,TODO - Enter header text,0,N\A  ,N\A,19/05/2021,\N
+121,121,121,Employee Name With Salutation,121,121,SB_1,118,118,Should display employee name with salutation,Paragraph,-,-,TODO - Enter paragraph data,0,N\A  ,N\A,19/05/2021,\N
+122,122,122,Employee Company,122,122,SB_1,118,118,Should display employee company,Paragraph,-,-,TODO - Enter paragraph data,0,N\A  ,N\A,19/05/2021,\N
+123,123,123,Employee Birthday,123,123,SB_1,118,118,Should display the employees birthday,Paragraph,-,-,TODO - Enter paragraph data,0,N\A  ,N\A,19/05/2021,\N
+124,124,124,User FaFa,124,124,SB_1,118,118,Should display user fa fa,-,-,-,fa fa-fw fa fa-user,0,N\A  ,N\A,19/05/2021,\N
+125,125,125,Company FaFa,125,125,SB_1,118,118,Should display bank (company) fa fa,-,-,-,fa fa-fw fa fa-bank,0,N\A  ,N\A,19/05/2021,\N
+126,126,126,Birthday FaFa,126,126,SB_1,118,118,Should display birthday-cake fa fa,-,-,-,fa fa-fw fa fa-birthday-cake,0,N\A  ,N\A,19/05/2021,\N
+127,127,127,Top Level of: Bio Content,127,127,SB_1,118,118,This is the top level test for Bio Content. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+128,128,128,Top Level of: Accordion - CV,128,128,SB_1,108,108,This is the top level test for Accordion - CV. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+129,129,129,Top Level of: Accordion - CV - Career,129,129,SB_1,128,128,This is the top level test for Accordion - CV - Career. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+130,130,130,Top Level of: Grid - Career,130,130,SB_1,129,129,This is the top level test for Grid - Career. For this to pass all its children must pass.,,,,,0,Data Out,Data In,19/05/2021,\N
+131,131,131,Top Level of: Acc Key - CV - Allowance,131,131,SB_1,128,128,This is the top level test for Acc Key - CV - Allowance. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+132,132,132,Top Level of: Grid - Allowance,132,132,SB_1,131,131,This is the top level test for Grid - Allowance. For this to pass all its children must pass.,,,,,0,Data Out,Data In,19/05/2021,\N
+133,133,133,Top Level of: Acc Key - CV - Salary,133,133,SB_1,128,128,This is the top level test for Acc Key - CV - Salary. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+134,134,134,Top Level of: Grid - Salary,134,134,SB_1,133,133,This is the top level test for Grid - Salary. For this to pass all its children must pass.,,,,,0,Data Out,Data In,19/05/2021,\N
+135,135,135,Top Level of: Acc Key - Emp Schedule,135,135,SB_1,128,128,This is the top level test for Acc Key - Emp Schedule. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+136,136,136,Top Level of: Grid - Emp Schedule,136,136,SB_1,135,135,This is the top level test for Grid - Emp Schedule. For this to pass all its children must pass.,,,,,0,Data Out,Data In,19/05/2021,\N
+137,137,137,Top Level of: Acc Key - Working Permit,137,137,SB_1,128,128,This is the top level test for Acc Key - Working Permit. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+138,138,138,Top Level of: Grid - Work Permit,138,138,SB_1,137,137,This is the top level test for Grid - Work Permit. For this to pass all its children must pass.,,,,,0,Data Out,Data In,19/05/2021,\N
+139,139,139,Top Level of: Save,139,139,SB_1,108,108,This is the top level test for Save. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,19/05/2021,\N
+140,140,140,Top Level of: Form - Save,140,140,SB_1,139,139,This is the top level test for Form - Save. For this to pass all its children must pass.,,,,,0,Group Controls,Group Data,19/05/2021,\N
+141,141,141,Top Level of: Form - Save - Header,141,141,SB_1,140,140,This is the top level test for Form - Save - Header. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+142,142,142,Form - Save - Title,142,142,SB_1,141,141,Should display the title of the save form,-,-,-,Save Changes,0,N\A  ,N\A,19/05/2021,\N
+143,143,143,Top Level of: Form - Save - Body,143,143,SB_1,140,140,This is the top level test for Form - Save - Body. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+144,144,144,Top Level of: Form - Save - Footer,144,144,SB_1,140,140,This is the top level test for Form - Save - Footer. For this to pass all its children must pass.,,,,,0,N\A  ,N\A,19/05/2021,\N
+145,145,145,Top Level of: Button Ok,145,145,SB_1,144,144,This is the top level test for Button Ok. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,19/05/2021,\N
+146,146,146,Top Level of: Button Cancel,146,146,SB_1,144,144,This is the top level test for Button Cancel. For this to pass all its children must pass.,,,,,0,Perform Function,N\A,19/05/2021,\N
