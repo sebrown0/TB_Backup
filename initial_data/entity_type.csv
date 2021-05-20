@@ -1,11 +1,16 @@
 id,entity_type_name,entity_type_parent_id
 1,Root,1
 2,Application,1
+26,Function,1
+33,Text,1
+35,Container,1
+38,FaFa,1
+43,JSPanel,1
 3,Module,2
+6,Form,2
 4,Module Category,3
 5,Module Sub-Category,4
-6,Form,2
-7,Popup Form,6
+7,Modal Form,6
 8,Parent Form,6
 9,Child Form,6
 10,Nav Bar,6
@@ -13,6 +18,17 @@ id,entity_type_name,entity_type_parent_id
 12,Grid,6
 13,Image,6
 14,Control,6
+27,Titlebar,6
+28,Header 1,6
+29,Header 2,6
+30,Header 3,6
+31,Header 4,6
+32,Header 5,6
+34,Paragraph,6
+36,Accordion,6
+39,Modal Header,7
+41,Modal Body,7
+42,Modal Footer,7
 15,List,14
 16,Tab,14
 17,Text Out,14
@@ -24,16 +40,22 @@ id,entity_type_name,entity_type_parent_id
 23,Button - Redirect,21
 24,Button - Display,21
 25,Button - Function,21
-26,Function,1
-27, Titlebar,6
-28, Header 1,6
-29, Header 2,6
-30, Header 3,6
-31, Header 4,6
-32, Header 5,6
-33,Text,1
-34,Paragraph,6
-35,Container,1
-36,Accordion,6
 37,Accordion Key,36
-38,FaFa,1
+40,Modal Title,39
+44,JSStandard,43
+45,JSHeader,43
+46,JSContent,43
+47,JSMinBox,43
+48,JSFtr,43
+49,JSResizeit,43
+54,JSDropdown,43
+50,JSHeaderLogo,45
+51,JSTitlebar,45
+52,JSControlbar,45
+53,JSHeaderToolbarActive,45
+58,JSPanelBtn,52
+59,JSPanelBtnNormalise,52
+60,JSPanelBtnExpand,52
+57,JSPanelSwitchRotate,53
+55,JSDropdownToggle,54
+56,JSDropdownMenu,54
