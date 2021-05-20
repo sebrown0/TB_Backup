@@ -1,1 +1,1 @@
-Add ts/tc upto 146
+Added JSPanel elements
