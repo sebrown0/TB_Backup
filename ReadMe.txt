@@ -1,1 +1,1 @@
-Fixed error with get_entity_has_ver
+Has elements and wb updates automatically

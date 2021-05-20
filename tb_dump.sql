@@ -319,7 +319,7 @@ CREATE TABLE `element` (
   PRIMARY KEY (`id`,`entity_row_id`,`entity_id`),
   UNIQUE KEY `id_UNIQUE` (`id`),
   UNIQUE KEY `entity_row_id_UNIQUE` (`entity_row_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -328,6 +328,7 @@ CREATE TABLE `element` (
 
 LOCK TABLES `element` WRITE;
 /*!40000 ALTER TABLE `element` DISABLE KEYS */;
+INSERT INTO `element` VALUES (1,9000,9000),(2,9001,9001),(3,9003,9003),(4,9004,9004),(5,9005,9005),(6,9018,9018);
 /*!40000 ALTER TABLE `element` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -623,6 +624,7 @@ CREATE TABLE `entity_has_element` (
 
 LOCK TABLES `entity_has_element` WRITE;
 /*!40000 ALTER TABLE `entity_has_element` DISABLE KEYS */;
+INSERT INTO `entity_has_element` VALUES (147,147,1,9000,9000),(147,147,6,9018,9018);
 /*!40000 ALTER TABLE `entity_has_element` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -1327,4 +1329,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-20 11:12:26
+-- Dump completed on 2021-05-20 16:12:51
