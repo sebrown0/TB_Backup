@@ -1,1 +1,1 @@
-Removed has elements from entity
+Fixed error with get_entity_has_ver
