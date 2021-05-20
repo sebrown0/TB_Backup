@@ -1,1 +1,1 @@
-Added DKGrid element
+Fixed error with get_entity_has_ver
