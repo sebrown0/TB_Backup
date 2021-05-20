@@ -1,0 +1,166 @@
+id,entity_id,entity_name,entity_details_id,entity_type_id,entity_type_entity_type_name,parent_id,parent_entity_id,entity_help_id,is_element
+1,1,rootER,1,1,Root,0,0,1,0
+2,2,Dakar Web,2,2,Application,1,1,2,0
+3,3,Login Screen,3,6,Form,2,2,0,0
+5,5,User Name,5,18,Text In,3,3,5,0
+7,7,User Password,7,18,Text In,3,3,0,0
+8,8,Login Button,8,23,Button - Redirect,3,3,8,0
+9,9,Home Page,9,8,Parent Form,8,8,9,0
+10,10,Home Page Info Bar,10,11,Info Bar,9,9,10,0
+11,11,Dakar Logo,11,13,Image,10,10,11,0
+12,12,Current Module Indicator,12,21,Label,10,10,12,0
+13,13,Menu Toggle,13,25,Button - Function,10,10,13,0
+14,14,Current Company,14,20,Combo,10,10,14,0
+15,15,Home Page Top Right Nav Bar,15,10,Nav Bar,9,9,0,0
+16,16,Authorisations,16,24,Button - Display,15,15,16,0
+17,17,Employee Creation Wizard,17,24,Button - Display,15,15,17,0
+18,18,Employee CV,18,24,Button - Display,15,15,18,0
+19,19,Employee Grid View,19,24,Button - Display,15,15,19,0
+20,20,Visual Reports,20,24,Button - Display,15,15,20,0
+21,21,Dakar Intelligence,21,24,Button - Display,15,15,21,0
+22,22,Organisation Chart,22,24,Button - Display,15,15,22,0
+23,23,My Company / Last Viewed,23,24,Button - Display,15,15,23,0
+24,24,All Notifications,24,24,Button - Display,15,15,24,0
+25,25,New Employments,25,24,Button - Display,15,15,25,0
+26,26,Terminations,26,24,Button - Display,15,15,26,0
+27,27,Quick Links,27,24,Button - Display,15,15,27,0
+28,28,User Avatar,28,24,Button - Display,15,15,28,0
+29,29,Main Menu,29,10,Nav Bar,9,9,29,0
+30,30,Main Menu - Payroll,30,10,Nav Bar,29,29,30,0
+31,31,Employee List,31,24,Button - Display,30,30,0,0
+32,32,Documents,32,24,Button - Display,30,30,0,0
+33,33,Employee Others,33,24,Button - Display,30,30,33,0
+34,34,Payroll,34,24,Button - Display,30,30,34,0
+35,35,Payroll Statistics,35,24,Button - Display,30,30,35,0
+36,36,Absence Statistics,36,24,Button - Display,30,30,36,0
+37,37,Reports,37,24,Button - Display,30,30,37,0
+38,38,Monthly Reports,38,24,Button - Display,30,30,38,0
+39,39,Yearly Reports,39,24,Button - Display,30,30,39,0
+40,40,Bulk Updates,40,24,Button - Display,30,30,40,0
+41,41,Settings,41,24,Button - Display,30,30,41,0
+42,42,Authorisations Form,42,6,Form,16,16,42,0
+43,43,Company,43,21,Label,42,42,43,0
+44,44,Company Combo,44,20,Combo,42,42,44,0
+45,45,Grouping View ,45,21,Label,42,42,45,0
+46,46,Grouping View Combo,46,20,Combo,42,42,46,0
+47,47,Accept Criteria,47,25,Button - Function,42,42,47,0
+48,48,Authorisations Grid,48,12,Grid,42,42,48,0
+49,49,Employee Creation Wizard - Step 1,49,26,Function,106,106,49,0
+50,50,Name,50,18,Text In,49,49,50,0
+51,51,Surname,51,18,Text In,49,49,51,0
+52,52,Identity Card Number,52,18,Text In,49,49,52,0
+53,53,Employee Code,53,18,Text In,49,49,53,0
+54,54,Address,54,18,Text In,49,49,54,0
+55,55,Street,55,18,Text In,49,49,55,0
+56,56,Post Code,56,18,Text In,49,49,56,0
+57,57,Select A Town,57,15,List,49,49,57,0
+58,58,Select A Country,58,15,List,49,49,58,0
+59,59,Back,59,25,Button - Function,49,49,59,0
+60,60,Continue,60,25,Button - Function,49,49,60,0
+61,61,Employee Creation Wizard - Step 2,61,26,Function,106,106,61,0
+62,62,Select A Gender,62,18,Text In,61,61,62,0
+63,63,Date Of Birth,63,18,Text In,61,61,63,0
+64,64,Date Of Employment,64,18,Text In,61,61,64,0
+65,65,Tax Number,65,18,Text In,61,61,65,0
+66,66,NI Number,66,18,Text In,61,61,66,0
+67,67,Select A Bank,67,15,List,61,61,67,0
+68,68,IBAN Number,68,18,Text In,61,61,68,0
+69,69,Email Address,69,18,Text In,61,61,69,0
+70,70,Mobile Number,70,18,Text In,61,61,70,0
+71,71,Back,71,25,Button - Function,61,61,71,0
+72,72,Continue,72,25,Button - Function,61,61,72,0
+73,73,Employee Creation Wizard - Step 3,73,26,Function,106,106,73,0
+74,74,Select A Tax Status,74,15,List,73,73,74,0
+75,75,Select An Employment Type,75,15,List,73,73,75,0
+76,76,Select Company,76,15,List,73,73,76,0
+77,77,Select A Paygroup,77,15,List,73,73,77,0
+78,78,Select A Department,78,15,List,73,73,78,0
+79,79,Select a Schedule,79,15,List,73,73,79,0
+80,80,Full or Part Timer ?,80,15,List,73,73,80,0
+81,81,Special Part Timer,81,15,List,73,73,81,0
+82,82,Select a Grade,82,15,List,73,73,82,0
+83,83,Select a Cost Center,83,15,List,73,73,83,0
+84,84,Back,84,25,Button - Function,73,73,84,0
+85,85,Continue,85,25,Button - Function,73,73,85,0
+86,86,Employee Creation Wizard - Step 4,86,26,Function,106,106,86,0
+87,87,Taxable Allowance 1 (Permenant),87,15,List,86,86,87,0
+88,88,Allowance Amount - Permanent,88,18,Text In,86,86,88,0
+89,89,Taxable Allowance 2 (Permenant),89,15,List,86,86,89,0
+90,90,Allowance Amount - Permanent,90,18,Text In,86,86,90,0
+91,91,Non Taxable Allowance 1 (Permenant),91,15,List,86,86,91,0
+92,92,Allowance Amount - Permanent,92,18,Text In,86,86,92,0
+93,93,Non Taxable Allowance 2 (Permenant),93,15,List,86,86,93,0
+94,94,Back,94,25,Button - Function,86,86,94,0
+95,95,Continue,95,25,Button - Function,86,86,95,0
+96,96,Employee Creation Wizard - Step 5,96,26,Function,106,106,96,0
+97,97,Annual Salary,97,18,Text In,96,96,97,0
+98,98,Hourly Rate,98,18,Text In,96,96,98,0
+99,99,Back,99,25,Button - Function,96,96,99,0
+100,100,Create Employee,100,25,Button - Function,96,96,100,0
+101,101,Heading ECW Step 1,101,30,Header 3,49,49,101,0
+102,102,Heading ECW Step 2,102,30,Header 3,61,61,102,0
+103,103,Heading ECW Step 3,103,30,Header 3,73,73,103,0
+104,104,Heading ECW Step 4,104,30,Header 3,86,86,104,0
+105,105,Heading ECW Step 5,105,30,Header 3,96,96,105,0
+106,106,Employee Creation Wizard,106,6,Form,17,17,106,0
+107,107,Employee Creation Wizard - Title,107,27,Titlebar,106,106,107,0
+108,108,Employee CV,108,6,Form,18,18,108,0
+109,109,Employee CV - Title,109,27,Titlebar,108,108,109,0
+110,110,Company - Label,110,21,Label,108,108,110,0
+111,111,Company - List,111,15,List,108,108,111,0
+112,112,Paygroup - Label,112,21,Label,108,108,112,0
+113,113,Paygroup - List,113,15,List,108,108,113,0
+114,114,Employee - Label,114,21,Label,108,108,114,0
+115,115,Employee - List,115,15,List,108,108,115,0
+116,116,Accept Criteria,116,25,Button - Function,108,108,116,0
+117,117,Accept Criteria - Text,117,33,Text,116,116,117,0
+118,118,Bio Info,118,35,Container,108,108,118,0
+119,119,Bio Info - Image,119,13,Image,118,118,119,0
+120,120,Employee Name,120,31,Header 4,118,118,120,0
+121,121,Employee Name With Salutation,121,34,Paragraph,118,118,121,0
+122,122,Employee Company,122,34,Paragraph,118,118,122,0
+123,123,Employee Birthday,123,34,Paragraph,118,118,123,0
+124,124,User FaFa,124,38,FaFa,118,118,124,0
+125,125,Company FaFa,125,38,FaFa,118,118,125,0
+126,126,Birthday FaFa,126,38,FaFa,118,118,126,0
+127,127,Bio Content,127,35,Container,118,118,127,0
+128,128,Accordion - CV,128,36,Accordion,108,108,128,0
+129,129,Accordion - CV - Career,129,37,Accordion Key,128,128,129,0
+130,130,Grid - Career,130,12,Grid,129,129,130,0
+131,131,Acc Key - CV - Allowance,131,37,Accordion Key,128,128,131,0
+132,132,Grid - Allowance,132,12,Grid,131,131,132,0
+133,133,Acc Key - CV - Salary,133,37,Accordion Key,128,128,133,0
+134,134,Grid - Salary,134,12,Grid,133,133,134,0
+135,135,Acc Key - Emp Schedule,135,37,Accordion Key,128,128,135,0
+136,136,Grid - Emp Schedule,136,12,Grid,135,135,136,0
+137,137,Acc Key - Working Permit,137,37,Accordion Key,128,128,137,0
+138,138,Grid - Work Permit,138,12,Grid,137,137,138,0
+139,139,Save,139,25,Button - Function,108,108,139,0
+140,140,Form - Save,140,7,Modal Form,139,139,140,0
+141,141,Form - Save - Header,141,39,Modal Header,140,140,141,0
+142,142,Form - Save - Title,142,40,Modal Title,141,141,142,0
+143,143,Form - Save - Body,143,41,Modal Body,140,140,143,0
+144,144,Form - Save - Footer,144,42,Modal Footer,140,140,144,0
+145,145,Button Ok,145,25,Button - Function,144,144,145,0
+146,146,Button Cancel,146,25,Button - Function,144,144,146,0
+147,147,Employee Grid View - Grid,147,12,Grid,148,148,147,0
+148,148,Employee Grid View - Form,148,6,Form,19,19,148,0
+9000,9000,JSPanel,149,43,JSPanel,1,1,149,1
+9001,9001,JSPanel Standard,150,44,JSStandard,9000,9000,150,1
+9002,9002,JSPanel Header,151,45,JSHeader,9000,9000,151,1
+9003,9003,JS Footer,152,48,JSFtr,9000,9000,152,1
+9004,9004,JS Content,153,46,JSContent,9000,9000,153,1
+9005,9005,JSMinBox,154,47,JSMinBox,9000,9000,154,1
+9006,9006,JSResizeit,155,49,JSResizeit,9000,9000,155,1
+9007,9007,JSHeaderLogo,156,50,JSHeaderLogo,9002,9002,156,1
+9008,9008,JSTitlebar,157,51,JSTitlebar,9002,9002,157,1
+9009,9009,JSControlbar,158,52,JSControlbar,9002,9002,158,1
+9010,9010,JSHeaderToolbarActive,159,53,JSHeaderToolbarActive,9002,9002,159,1
+9011,9011,JSDropdown,160,54,JSDropdown,9000,9000,160,1
+9012,9012,JSDropdownToggle,161,55,JSDropdownToggle,9011,9011,161,1
+9013,9013,JSDropdownMenu,162,56,JSDropdownMenu,9011,9011,162,1
+9014,9014,JSPanelSwitchRotate,163,57,JSPanelSwitchRotate,9010,9010,163,1
+9015,9015,JSPanelBtn,164,58,JSPanelBtn,9009,9009,164,1
+9016,9016,JSPanelBtnNormalise,165,59,JSPanelBtnNormalise,9009,9009,165,1
+9017,9017,JSPanelBtnExpand,166,60,JSPanelBtnExpand,9009,9009,166,1
+9018,9018,DKGrid,167,61,DKGrid,1,1,167,1
