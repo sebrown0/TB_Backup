@@ -1,1 +1,1 @@
-Has elements and wb updates automatically
+Added all elements and updated the entities to have element
