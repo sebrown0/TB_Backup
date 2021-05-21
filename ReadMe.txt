@@ -1,2 +1,2 @@
-Added all elements and updated the entities to have element
-Added TSs
+Starting to add child elements
+Correct mistake in update_versions for en/tc/ts
