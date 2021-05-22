@@ -1,1 +1,1 @@
-WB update only
+Update delete_entity_and_tests
