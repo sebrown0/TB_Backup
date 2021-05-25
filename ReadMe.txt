@@ -1,1 +1,1 @@
-Add all entities upto the last left menu item - Settings
+Add all TS/TCs upto the last left menu item - Settings
