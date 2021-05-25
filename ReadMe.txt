@@ -1,2 +1,1 @@
-Modified child inserts.
-Add employee for the left-side nav
+Add all entities upto the last left menu item - Settings
