@@ -1,1 +1,1 @@
-Add all TS/TCs upto the last left menu item - Settings
+Add entities upto 554,551 - Bulk Updates
