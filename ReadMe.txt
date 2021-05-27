@@ -1,1 +1,1 @@
-State after creating report for TR3
+State before adding group
