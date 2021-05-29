@@ -1,1 +1,1 @@
-Restored TS/TCs from 321 after name change.
+Change the generate test method
