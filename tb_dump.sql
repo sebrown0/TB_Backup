@@ -938,6 +938,63 @@ INSERT INTO `entity_type` VALUES (1,'Root',1),(2,'Application',1),(26,'Function'
 UNLOCK TABLES;
 
 --
+-- Table structure for table `entity_type_fail_reason`
+--
+
+DROP TABLE IF EXISTS `entity_type_fail_reason`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `entity_type_fail_reason` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `fail_reason` varchar(500) NOT NULL,
+  `fail_description` varchar(1000) NOT NULL,
+  `fail_severity` tinyint(3) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=26 DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `entity_type_fail_reason`
+--
+
+LOCK TABLES `entity_type_fail_reason` WRITE;
+/*!40000 ALTER TABLE `entity_type_fail_reason` DISABLE KEYS */;
+INSERT INTO `entity_type_fail_reason` VALUES (1,'Child failed','A child entity of the test suite failed',5),(2,'Incorrect text','The text displayed by the entity is incorrect.',4),(3,'Text did not match expected','The text displayed by the entity did not match the expected.',4),(4,'Incorrect image','The image displayed by the entity is incorrect.',4),(5,'Image did not match expected','The image displayed by the entity did not match the expected.',4),(6,'FaFa did not match expected','The fa-fa displayed by the entity did not match the expected.',4),(7,'Incorrect list data','The list data is incorrect.',4),(8,'List data did not match expected','The data in the list is incorrect.',4),(9,'Empty list','The list is empty.',3),(10,'Display of child entity fails','Either the wrong form, menu etc. is displayed or nothing is displayed after clicking the button.',2),(11,'Redirect fails','The wrong page or no page is displayed after clicking the button.',2),(12,'Button function fails','The expected function of the button fails.',3),(13,'App crashes - 1','The application crashed and was not able to recover.',1),(14,'App crashes - 2','The application crashed but was able to recover.',2),(15,'Form is unresponsive','The form does not respond to the user',2),(16,'Entity is unresponsive','The entity does not respond to the user',2),(17,'Incorrect number of menu items','The menu does not have the expected number of items.',3),(18,'Tab elements displayed incorrectly','The elements on the tab are incorrectly displayed.',3),(19,'Data entered is invalid','The user was allowed to enter incorrect or incompatable data.',3),(20,'Function fails','The expected function of the enity fails or is incorrect.',3),(21,'Incorrect label text - 1','The label text is slightly incorrect.',5),(22,'Incorrect label text - 2','The label text is incorrect and misleads the user.',4),(23,'Incorrect accordion keys','The accordion keys displayed are incorrect.',3),(24,'Incorrect card elements','The card elements displayed are incorrect.',3),(25,'Incorrect elements','The elements displayed are incorrect.',3);
+/*!40000 ALTER TABLE `entity_type_fail_reason` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `entity_type_has_fail_reason`
+--
+
+DROP TABLE IF EXISTS `entity_type_has_fail_reason`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+ SET character_set_client = utf8mb4 ;
+CREATE TABLE `entity_type_has_fail_reason` (
+  `entity_type_id` int(10) unsigned NOT NULL,
+  `entity_type_name` varchar(45) NOT NULL,
+  `entity_type_fail_reason_id` int(10) unsigned NOT NULL,
+  `is_primary_reason` tinyint(4) DEFAULT '0',
+  PRIMARY KEY (`entity_type_id`,`entity_type_name`,`entity_type_fail_reason_id`),
+  KEY `fk_entity_type_has_entity_type_fail_reason_entity_type_fail_idx` (`entity_type_fail_reason_id`),
+  KEY `fk_entity_type_has_entity_type_fail_reason_entity_type1_idx` (`entity_type_id`,`entity_type_name`),
+  CONSTRAINT `fk_entity_type_has_entity_type_fail_reason_entity_type1` FOREIGN KEY (`entity_type_id`, `entity_type_name`) REFERENCES `entity_type` (`id`, `entity_type_name`),
+  CONSTRAINT `fk_entity_type_has_entity_type_fail_reason_entity_type_fail_r1` FOREIGN KEY (`entity_type_fail_reason_id`) REFERENCES `entity_type_fail_reason` (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `entity_type_has_fail_reason`
+--
+
+LOCK TABLES `entity_type_has_fail_reason` WRITE;
+/*!40000 ALTER TABLE `entity_type_has_fail_reason` DISABLE KEYS */;
+INSERT INTO `entity_type_has_fail_reason` VALUES (1,'Root',1,1),(1,'Root',13,0),(1,'Root',14,0),(2,'Application',1,1),(2,'Application',13,0),(2,'Application',14,0),(3,'Module',1,1),(3,'Module',13,0),(3,'Module',14,0),(4,'Module Category',1,1),(4,'Module Category',13,0),(4,'Module Category',14,0),(5,'Module Sub-Category',1,1),(5,'Module Sub-Category',13,0),(5,'Module Sub-Category',14,0),(6,'Form',1,1),(6,'Form',13,0),(6,'Form',14,0),(6,'Form',15,0),(7,'Modal Form',1,1),(7,'Modal Form',13,0),(7,'Modal Form',14,0),(7,'Modal Form',15,0),(8,'Parent Form',1,0),(8,'Parent Form',13,0),(8,'Parent Form',14,0),(8,'Parent Form',15,0),(9,'Child Form',1,1),(9,'Child Form',13,0),(9,'Child Form',14,0),(9,'Child Form',15,0),(10,'Nav Bar',1,1),(10,'Nav Bar',10,0),(10,'Nav Bar',13,0),(10,'Nav Bar',14,0),(10,'Nav Bar',17,0),(11,'Info Bar',1,1),(11,'Info Bar',10,0),(11,'Info Bar',13,0),(11,'Info Bar',14,0),(11,'Info Bar',17,0),(12,'Grid',1,1),(12,'Grid',13,0),(12,'Grid',14,0),(12,'Grid',16,0),(13,'Image',5,1),(13,'Image',10,0),(13,'Image',13,0),(13,'Image',14,0),(13,'Image',16,0),(14,'Control',1,1),(14,'Control',13,0),(14,'Control',14,0),(14,'Control',16,0),(15,'List',8,1),(15,'List',9,0),(15,'List',13,0),(15,'List',14,0),(15,'List',16,0),(16,'Tab',1,1),(16,'Tab',13,0),(16,'Tab',14,0),(16,'Tab',16,0),(16,'Tab',18,0),(17,'Text Out',3,1),(17,'Text Out',13,0),(17,'Text Out',14,0),(17,'Text Out',16,0),(18,'Text In',13,0),(18,'Text In',14,0),(18,'Text In',16,0),(18,'Text In',19,1),(19,'Text In/Out',3,0),(19,'Text In/Out',13,0),(19,'Text In/Out',14,0),(19,'Text In/Out',16,0),(19,'Text In/Out',19,1),(20,'Combo',8,0),(20,'Combo',9,0),(20,'Combo',13,0),(20,'Combo',14,0),(20,'Combo',16,0),(20,'Combo',20,1),(21,'Label',13,0),(21,'Label',14,0),(21,'Label',21,1),(21,'Label',22,0),(22,'Button',3,0),(22,'Button',6,0),(22,'Button',12,1),(22,'Button',13,0),(22,'Button',14,0),(22,'Button',16,0),(23,'Button - Redirect',3,0),(23,'Button - Redirect',6,0),(23,'Button - Redirect',11,1),(23,'Button - Redirect',13,0),(23,'Button - Redirect',14,0),(23,'Button - Redirect',16,0),(24,'Button - Display',3,0),(24,'Button - Display',6,0),(24,'Button - Display',10,1),(24,'Button - Display',13,0),(24,'Button - Display',14,0),(24,'Button - Display',16,0),(25,'Button - Function',3,0),(25,'Button - Function',6,0),(25,'Button - Function',12,1),(25,'Button - Function',13,0),(25,'Button - Function',14,0),(25,'Button - Function',16,0),(26,'Function',13,0),(26,'Function',14,0),(26,'Function',16,0),(26,'Function',20,1),(27,'Titlebar',2,0),(27,'Titlebar',3,1),(27,'Titlebar',6,0),(28,'Header 1',2,0),(28,'Header 1',3,1),(29,'Header 2',2,0),(29,'Header 2',3,1),(30,'Header 3',2,0),(30,'Header 3',3,1),(31,'Header 4',2,0),(31,'Header 4',3,1),(32,'Header 5',2,0),(32,'Header 5',3,1),(33,'Text',2,0),(33,'Text',3,1),(34,'Paragraph',1,1),(34,'Paragraph',2,0),(34,'Paragraph',3,0),(34,'Paragraph',5,0),(34,'Paragraph',6,0),(35,'Container',1,1),(36,'Accordion',1,1),(36,'Accordion',2,0),(36,'Accordion',3,0),(36,'Accordion',6,0),(36,'Accordion',23,0),(37,'Accordion Key',1,1),(37,'Accordion Key',2,0),(37,'Accordion Key',3,0),(37,'Accordion Key',6,0),(37,'Accordion Key',13,0),(37,'Accordion Key',14,0),(37,'Accordion Key',16,0),(38,'FaFa',6,1),(39,'Modal Header',2,0),(39,'Modal Header',3,1),(39,'Modal Header',6,0),(40,'Modal Title',2,0),(40,'Modal Title',3,1),(40,'Modal Title',6,0),(41,'Modal Body',2,0),(41,'Modal Body',3,1),(41,'Modal Body',6,0),(41,'Modal Body',13,0),(41,'Modal Body',14,0),(41,'Modal Body',16,0),(42,'Modal Footer',1,0),(43,'JSPanel',1,1),(43,'JSPanel',13,0),(43,'JSPanel',14,0),(43,'JSPanel',16,0),(44,'JSStandard',1,1),(44,'JSStandard',13,0),(44,'JSStandard',14,0),(44,'JSStandard',16,0),(45,'JSHeader',2,0),(45,'JSHeader',3,1),(45,'JSHeader',6,0),(46,'JSContent',1,1),(46,'JSContent',2,0),(46,'JSContent',3,0),(46,'JSContent',6,0),(46,'JSContent',16,0),(46,'JSContent',20,0),(47,'JSMinBox',20,1),(48,'JSFtr',20,1),(49,'JSResizeit',20,1),(50,'JSHeaderLogo',4,1),(50,'JSHeaderLogo',6,1),(51,'JSTitlebar',2,0),(51,'JSTitlebar',3,1),(51,'JSTitlebar',6,0),(52,'JSControlbar',1,0),(53,'JSHeaderToolbarActive',1,0),(54,'JSDropdown',8,0),(54,'JSDropdown',10,1),(55,'JSDropdownToggle',8,0),(55,'JSDropdownToggle',10,1),(56,'JSDropdownMenu',8,0),(56,'JSDropdownMenu',10,1),(57,'JSPanelSwitchRotate',20,1),(58,'JSPanelBtn',20,1),(59,'JSPanelBtnNormalise',20,1),(60,'JSPanelBtnExpand',20,1),(61,'DKGrid',1,1),(62,'Card',1,1),(62,'Card',2,0),(62,'Card',3,0),(62,'Card',6,0),(63,'Card Group',1,1),(63,'Card Group',24,0),(64,'Card Element',1,1),(65,'Card Header',2,0),(65,'Card Header',3,1),(66,'Card Body',1,1),(66,'Card Body',2,0),(66,'Card Body',3,0),(66,'Card Body',10,0),(67,'Card Title',2,0),(67,'Card Title',3,1),(68,'Element Header',2,0),(68,'Element Header',3,1),(68,'Element Header',6,0),(69,'Row',1,1),(70,'Column',1,1),(71,'JSDropdownMenuHeader',1,1),(72,'JSDropdownMenuItem',1,1),(73,'NavLink',1,1),(73,'NavLink',10,0),(74,'NavPill',1,1),(74,'NavPill',10,0),(75,'QLGrid',1,1),(75,'QLGrid',25,0),(76,'QLGridItem',2,0),(76,'QLGridItem',3,1),(76,'QLGridItem',6,0),(76,'QLGridItem',10,0),(77,'QLGridItemTitle',2,0),(77,'QLGridItemTitle',3,1),(78,'MediaObj',1,0),(79,'MediaObjBody',1,0),(80,'LeftSideBar',1,1),(80,'LeftSideBar',2,0),(80,'LeftSideBar',3,0),(80,'LeftSideBar',6,0),(80,'LeftSideBar',13,0),(80,'LeftSideBar',14,0),(80,'LeftSideBar',16,0),(80,'LeftSideBar',17,0),(81,'NavAccordion',1,0),(81,'NavAccordion',2,0),(81,'NavAccordion',3,0),(81,'NavAccordion',6,0),(81,'NavAccordion',13,0),(81,'NavAccordion',14,0),(81,'NavAccordion',16,0),(81,'NavAccordion',17,0),(82,'MobileLeftSideHider',1,1),(82,'MobileLeftSideHider',2,0),(82,'MobileLeftSideHider',3,0),(82,'MobileLeftSideHider',6,0),(82,'MobileLeftSideHider',13,0),(82,'MobileLeftSideHider',14,0),(82,'MobileLeftSideHider',16,0),(82,'MobileLeftSideHider',17,0),(83,'SubMenu',1,1),(83,'SubMenu',2,0),(83,'SubMenu',3,0),(83,'SubMenu',6,0),(83,'SubMenu',13,0),(83,'SubMenu',14,0),(83,'SubMenu',16,0),(83,'SubMenu',17,0),(84,'href',1,1),(84,'href',2,0),(84,'href',3,0),(84,'href',11,0);
+/*!40000 ALTER TABLE `entity_type_has_fail_reason` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `import_test_result`
 --
 
@@ -1390,4 +1447,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-05-29 14:53:31
+-- Dump completed on 2021-05-30 13:42:19
