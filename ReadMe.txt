@@ -1,3 +1,1 @@
-Add result data form.
-Update test run WS with test data.
-Copy this back to the DB.
+Changed tr id in entity_test result from 7 to 10 for TR 4 as was wrong
