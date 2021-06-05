@@ -1,1 +1,2 @@
-Changed tr id in entity_test result from 7 to 10 for TR 4 as was wrong
+Add form for selecting grid elements.
+Remove last row check in SetParentIDs.
