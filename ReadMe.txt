@@ -1,1 +1,1 @@
-Add TS/TC upto 1058
+Run test runs upto/including 7
