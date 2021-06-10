@@ -1,1 +1,1 @@
-Run test runs upto/including 7
+Complete the test run report template
