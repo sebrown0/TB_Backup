@@ -1,1 +1,1 @@
-Add test suites/cases upto 12036/12035.
+Change mCreateTestSuite to always create a test for TS & TC. Reload user management tests.
